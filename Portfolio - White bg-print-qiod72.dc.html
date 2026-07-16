@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -22,7 +31,6 @@
     a:hover { color: #FF49A4; }
     ::selection { background: #E8FF00; color: #030504; }
   </style>
-  <script src="./image-slot.js"></script>
 </helmet>
 
 <div style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: {{ pageBg }}; color: #030504; min-height: 100vh;">
@@ -31,7 +39,7 @@
   <div style="position: sticky; top: 0; z-index: 100; background: #030504; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; box-sizing: border-box;">
     <div style="display: flex; align-items: center; gap: 14px; cursor: pointer;" onClick="{{ goHome }}">
       <div style="position: relative; height: 40px; transform: rotate(-6deg); transition: transform 0.25s;" style-hover="transform: rotate(6deg) scale(1.08);">
-        <img src="./avanti-logo.png" alt="Avanti" style="height: 40px; width: auto; display: block;">
+        <img src="assets/avanti-logo.png" alt="Avanti" style="height: 40px; width: auto; display: block;">
       </div>
       <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 1px; color: #fff;">AVANTI POINTER</span>
     </div>
@@ -39,7 +47,7 @@
       <span onClick="{{ goHome }}" style="font-size: 13px; font-weight: 600; letter-spacing: 1.2px; cursor: pointer; color: {{ homeNavColor }}; transition: color 0.2s;">HOME</span>
       <span onClick="{{ goPortfolio }}" style="font-size: 13px; font-weight: 600; letter-spacing: 1.2px; cursor: pointer; color: {{ portfolioNavColor }}; transition: color 0.2s;">PORTFOLIO</span>
       <span onClick="{{ goResume }}" style="font-size: 13px; font-weight: 600; letter-spacing: 1.2px; cursor: pointer; color: {{ resumeNavColor }}; transition: color 0.2s;">RESUME</span>
-      <span onClick="{{ goContact }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); border-radius: 15px; transition: transform 0.2s;" style-hover="transform: rotate(2deg) scale(1.05);">SAY HI →</span>
+      <span onClick="{{ goContact }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); transition: transform 0.2s;" style-hover="transform: rotate(2deg) scale(1.05);">SAY HI →</span>
     </div>
   </div>
 
@@ -66,17 +74,17 @@
           </h1>
           <p style="font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.78); margin: 0 0 36px; max-width: 500px;">A creative (and certifiably smiley) product designer who turns tangled problems into experiences people actually enjoy — one wireframe, one weird idea, and one very good playlist at a time. Big impact, bigger empathy.</p>
           <div style="display: flex; gap: 18px; flex-wrap: wrap;">
-            <button onClick="{{ goPortfolio }}" style="background: #72E2EF; border: none; padding: 16px 36px; border-radius: 15px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: rotate(1deg) translateY(-3px); box-shadow: 4px 6px 0 #FF49A4;">SEE THE WORK →</button>
-            <button onClick="{{ goContact }}" style="background: transparent; border: 1.5px solid rgba(255,255,255,0.35); padding: 16px 36px; border-radius: 15px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 1.4px; color: #fff; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s;" style-hover="transform: rotate(-1deg) translateY(-3px); border-color: #E8FF00; color: #E8FF00;">SAY HELLO 👋</button>
+            <button onClick="{{ goPortfolio }}" style="background: #72E2EF; border: none; padding: 16px 36px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: rotate(1deg) translateY(-3px); box-shadow: 4px 6px 0 #FF49A4;">SEE THE WORK →</button>
+            <button onClick="{{ goContact }}" style="background: transparent; border: 1.5px solid rgba(255,255,255,0.35); padding: 16px 36px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 1.4px; color: #fff; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s;" style-hover="transform: rotate(-1deg) translateY(-3px); border-color: #E8FF00; color: #E8FF00;">SAY HELLO 👋</button>
           </div>
         </div>
 
         <div style="position: relative; width: 280px; height: 280px; flex-shrink: 0;">
-          <img src="./avanti-logo.png" alt="Avanti" style="position: absolute; inset: 0; margin: auto; height: 268px; width: auto; transform: rotate(-4deg); animation: float-y 6s ease-in-out infinite; --r: -4deg;">
+          <img src="assets/avanti-logo.png" alt="Avanti" style="position: absolute; inset: 0; margin: auto; height: 268px; width: auto; transform: rotate(-4deg); animation: float-y 6s ease-in-out infinite; --r: -4deg;">
           <div style="position: absolute; top: -20px; right: -14px; width: 40px; height: 40px; background: #FF49A4; transform: rotate(18deg); animation: spin-slow 14s linear infinite;"></div>
           <div style="position: absolute; bottom: -18px; left: -20px; width: 32px; height: 32px; border-radius: 50%; background: #E8FF00; animation: float-y 4s ease-in-out infinite 0.3s; --r: 0deg;"></div>
           <!-- doodle speech bubble topping -->
-          <div style="position: absolute; top: -34px; left: -44px; background: #fff; color: #030504; font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 8px 12px; border: 2px solid #030504; border-radius: 15px; animation: bob-bubble 3.4s ease-in-out infinite; --r: -6deg;">
+          <div style="position: absolute; top: -34px; left: -44px; background: #fff; color: #030504; font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 8px 12px; border: 2px solid #030504; animation: bob-bubble 3.4s ease-in-out infinite; --r: -6deg;">
             hi! wassup?
             <div style="position: absolute; bottom: -9px; left: 16px; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 9px solid #030504;"></div>
             <div style="position: absolute; bottom: -6px; left: 18px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid #fff;"></div>
@@ -100,7 +108,7 @@
         <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; line-height: 1.05; margin: 0 0 24px; transform: rotate(-0.5deg);">DESIGN AS A<br>TOOL FOR GOOD<span style="color: #FF49A4;">.</span></h2>
         <p style="font-size: 15.5px; line-height: 1.75; color: #454141; margin: 0 0 18px;">Hello, hello! I'm a Product Designer with 6+ years leading UX strategy, research, and product design for mission-driven digital products — turning complex requirements into experiences people can actually navigate with confidence (and, ideally, a big smile).</p>
         <p style="font-size: 15.5px; line-height: 1.75; color: #454141; margin: 0 0 30px;">I lead UX strategy, research, and design for mission-driven products — partnering with engineering and leadership to ship accessible, human-centered work.</p>
-        <span onClick="{{ goResume }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 12px 22px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s; border-radius: 15px;" style-hover="transform: rotate(-1deg); background: #E8FF00;">SEE MY RESUME →</span>
+        <span onClick="{{ goResume }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 12px 22px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s;" style-hover="transform: rotate(-1deg); background: #E8FF00;">SEE MY RESUME →</span>
       </div>
       <div style="flex: 1 1 420px; min-width: 320px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
         <sc-for list="{{ aboutSkills }}" as="skill" hint-placeholder-count="6">
@@ -148,41 +156,21 @@
             <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #FF49A4; margin-bottom: 14px;">SELECTED PROJECTS</div>
             <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin: 0; transform: rotate(0.5deg);">FEATURED WORK</h2>
           </div>
-          <span onClick="{{ goPortfolio }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1px; padding: 12px 20px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s; border-radius: 15px;" style-hover="transform: rotate(1deg); background: #72E2EF;">ALL PROJECTS →</span>
+          <span onClick="{{ goPortfolio }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1px; padding: 12px 20px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s;" style-hover="transform: rotate(1deg); background: #72E2EF;">ALL PROJECTS →</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px;">
-          <div onClick="{{ goCase }}" style="background: #fff; transform: rotate(-2deg); transition: transform 0.25s, box-shadow 0.25s; cursor: pointer; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
-            <div style="position: relative; height: 200px; overflow: hidden;">
-              <image-slot id="home-feat-1" shape="rect" fit="cover" src="./customer_demo_overview_text_icon_sidebar-mrnjg9t2-3hs2.png" placeholder="Drop Benefit Navigation image"></image-slot>
-              <span style="position: absolute; top: 14px; left: 14px; background: #72E2EF; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg); z-index: 2;">PRODUCT DESIGN</span>
+          <sc-for list="{{ featuredWork }}" as="item" hint-placeholder-count="3">
+            <div onClick="{{ item.onClick }}" style="background: #fff; transform: rotate({{ item.rotate }}deg); transition: transform 0.25s, box-shadow 0.25s; cursor: {{ item.cursor }}; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
+              <div style="position: relative; height: 200px; overflow: hidden;">
+                <img src="{{ item.img }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <span style="position: absolute; top: 14px; left: 14px; background: {{ item.color }}; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg);">{{ item.tag }}</span>
+              </div>
+              <div style="padding: 22px;">
+                <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">{{ item.title }}</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #6b6764;">{{ item.desc }}</div>
+              </div>
             </div>
-            <div style="padding: 22px;">
-              <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">Benefit Navigation Platform</div>
-              <div style="font-size: 14px; line-height: 1.6; color: #6b6764;">Designing a platform that helps individuals identify, understand, and access public benefits — with way less headache.</div>
-            </div>
-          </div>
-
-          <div style="background: #fff; transform: rotate(1deg); transition: transform 0.25s, box-shadow 0.25s; cursor: default; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
-            <div style="position: relative; height: 200px; overflow: hidden;">
-              <image-slot id="home-feat-2" shape="rect" fit="cover" src="assets/bestfit-web.jpg" placeholder="Drop BestFit Web Redesign image"></image-slot>
-              <span style="position: absolute; top: 14px; left: 14px; background: #FF49A4; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg); z-index: 2;">WEB DESIGN</span>
-            </div>
-            <div style="padding: 22px;">
-              <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">BestFit, Inc. Web Redesign</div>
-              <div style="font-size: 14px; line-height: 1.6; color: #6b6764;">Led a 7-member design team in rebranding Bella and Bailey, a Black-owned Atlanta dog accessories company.</div>
-            </div>
-          </div>
-
-          <div style="background: #fff; transform: rotate(-1deg); transition: transform 0.25s, box-shadow 0.25s; cursor: default; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
-            <div style="position: relative; height: 200px; overflow: hidden;">
-              <image-slot id="home-feat-3" shape="rect" fit="cover" src="assets/ai-initiative.jpg" placeholder="Drop AI Initiative image"></image-slot>
-              <span style="position: absolute; top: 14px; left: 14px; background: #E8FF00; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg); z-index: 2;">STRATEGY &amp; RESEARCH</span>
-            </div>
-            <div style="padding: 22px;">
-              <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">AI Initiative (Gitlab)</div>
-              <div style="font-size: 14px; line-height: 1.6; color: #6b6764;">A series addressing the historical context of racial inequalities in America through expressive design.</div>
-            </div>
-          </div>
+          </sc-for>
         </div>
       </div>
     </div>
@@ -192,7 +180,7 @@
       <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #4BF33F; margin-bottom: 28px;">TOOLS &amp; SOFTWARE (MY TRUSTY SIDEKICKS)</div>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
         <sc-for list="{{ toolChips }}" as="tool" hint-placeholder-count="10">
-          <span style="font-size: 13.5px; font-weight: 500; padding: 10px 20px; border: 1.5px solid #ddd8d3; border-radius: 15px; transform: rotate({{ tool.rotate }}deg); transition: transform 0.2s, border-color 0.2s;" style-hover="transform: rotate(0deg) scale(1.06); border-color: {{ tool.color }};">{{ tool.name }}</span>
+          <span style="font-size: 13.5px; font-weight: 500; padding: 10px 20px; border: 1.5px solid #ddd8d3; transform: rotate({{ tool.rotate }}deg); transition: transform 0.2s, border-color 0.2s;" style-hover="transform: rotate(0deg) scale(1.06); border-color: {{ tool.color }};">{{ tool.name }}</span>
         </sc-for>
       </div>
     </div>
@@ -204,7 +192,7 @@
       <span style="position: absolute; top: 60px; right: 120px; font-size: 20px; color: #E8FF00; animation: twinkle 3s ease-in-out infinite; --r: 6deg;">✦</span>
       <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 20px;">LET'S WORK TOGETHER</div>
       <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52px; color: #fff; margin: 0 0 36px; transform: rotate(-1deg);">WANT TO GET<br>IN TOUCH?</h2>
-      <a onClick="{{ goContact }}" style="display: inline-block; background: #E8FF00; padding: 18px 44px; border-radius: 15px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; text-decoration: none; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: rotate(-1deg) scale(1.05); box-shadow: 5px 6px 0 #FF49A4;">SAY HI →</a>
+      <a onClick="{{ goContact }}" style="display: inline-block; background: #E8FF00; padding: 18px 44px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; text-decoration: none; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: rotate(-1deg) scale(1.05); box-shadow: 5px 6px 0 #FF49A4;">SAY HI →</a>
     </div>
 
   </div>
@@ -227,13 +215,13 @@
 
     <div style="max-width: 1180px; margin: 0 auto; padding: 36px 48px 0; display: flex; gap: 12px; flex-wrap: wrap; box-sizing: border-box;">
       <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
-        <span onClick="{{ f.onClick }}" style="font-size: 12.5px; font-weight: 700; letter-spacing: 1px; padding: 10px 18px; cursor: pointer; background: {{ f.bg }}; color: {{ f.fg }}; border: 1.5px solid {{ f.border }}; border-radius: 15px; transform: rotate({{ f.rotate }}deg); transition: transform 0.15s;" style-hover="transform: rotate(0deg) translateY(-2px);">{{ f.label }}</span>
+        <span onClick="{{ f.onClick }}" style="font-size: 12.5px; font-weight: 700; letter-spacing: 1px; padding: 10px 18px; cursor: pointer; background: {{ f.bg }}; color: {{ f.fg }}; border: 1.5px solid {{ f.border }}; transform: rotate({{ f.rotate }}deg); transition: transform 0.15s;" style-hover="transform: rotate(0deg) translateY(-2px);">{{ f.label }}</span>
       </sc-for>
     </div>
 
     <div style="max-width: 1180px; margin: 0 auto; padding: 40px 48px 110px; box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 44px;">
       <sc-for list="{{ filteredWork }}" as="item" hint-placeholder-count="6">
-        <div onClick="{{ item.onClick }}" style="background: #fff; transform: rotate({{ item.rotate }}deg); transition: transform 0.25s, box-shadow 0.25s; cursor: {{ item.cursor }}; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 9px 11px 0 rgba(3,5,4,0.18);">
+        <div onClick="{{ item.onClick }}" style="background: #fff; transform: rotate({{ item.rotate }}deg); transition: transform 0.25s, box-shadow 0.25s; cursor: {{ item.cursor }}; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 9px 11px 0 rgba(3,5,4,0.18);">
           <div style="position: relative; height: 230px; overflow: hidden; border-top: 5px solid {{ item.color }};">
             <img src="{{ item.img }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
@@ -244,7 +232,7 @@
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 8px;">
               <sc-for list="{{ item.tags }}" as="tag" hint-placeholder-count="3">
-                <span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.5px; padding: 5px 10px; background: {{ panelBg }}; border-radius: 15px; color: #58534f;">{{ tag }}</span>
+                <span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.5px; padding: 5px 10px; background: {{ panelBg }}; color: #58534f;">{{ tag }}</span>
               </sc-for>
             </div>
           </div>
@@ -259,33 +247,33 @@
   <!-- ============================================================ -->
   <sc-if value="{{ isCase }}">
   <div data-screen-label="Case Study">
-    <div style="position: relative; background: #030504; padding: 60px 24px 50px; box-sizing: border-box; overflow: hidden;">
+    <div style="position: relative; background: #030504; padding: 60px 48px 50px; box-sizing: border-box; overflow: hidden;">
       <span style="position: absolute; top: 26px; right: 60px; font-size: 22px; color: #4BF33F; animation: float-y 4s ease-in-out infinite; --r: -8deg;">+</span>
-      <div style="max-width: 1340px; margin: 0 auto;">
-        <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 1.5px; color: #72E2EF; margin-bottom: 18px;"><span onClick="{{ goPortfolio }}" style="cursor: pointer;">PORTFOLIO</span> / BENEFITS NAVIGATION PLATFORM</div><div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap;">
+      <div style="max-width: 1180px; margin: 0 auto;">
+        <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 1.5px; color: #72E2EF; margin-bottom: 18px;"><span onClick="{{ goPortfolio }}" style="cursor: pointer;">PORTFOLIO</span> / BENEFITS NAVIGATION PLATFORM</div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap;">
           <div>
             <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #FF49A4; margin-bottom: 12px;">PRODUCT DESIGN</div>
             <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 44px; color: #fff; line-height: 1.05; margin: 0 0 16px; transform: rotate(-1deg);">BENEFITS<br>NAVIGATION<br>PLATFORM</h1>
             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 15px;">PRODUCT DESIGN</span>
-              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 15px;">WEB APPLICATION</span>
-              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 15px;">UI DESIGN</span>
+              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff;">PRODUCT DESIGN</span>
+              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff;">WEB APPLICATION</span>
+              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff;">UI DESIGN</span>
             </div>
           </div>
-          <p style="max-width: 320px; font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,0.75); margin: 0;">Helping people spend less time decoding government systems—and more time getting the support they deserve.</p>
+          <p style="max-width: 320px; font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,0.75); margin: 0;">Designing a platform that helps individuals identify, understand, and access public benefits.</p>
         </div>
-        
       </div>
     </div>
 
-    <div style="max-width: 1340px; margin: 0 auto; padding: 40px 24px 0; box-sizing: border-box;">
-      <div style="height: 340px; overflow: hidden; transform: rotate(-0.6deg); border-radius: 15px; box-shadow: 6px 8px 0 rgba(3,5,4,0.12);">
-        <img src="./screenshot-2026-02-19-144734-mrnc2whk-8zp6.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="screenshot-2026-02-19-144734">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 40px 48px 0; box-sizing: border-box;">
+      <div style="height: 340px; overflow: hidden; transform: rotate(-0.6deg); box-shadow: 6px 8px 0 rgba(3,5,4,0.12);">
+        <img src="assets/case-hero-team.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
     </div>
 
     <div style="background: #72E2EF; margin-top: 46px; transform: rotate(-0.4deg);">
-      <div style="max-width: 1340px; margin: 0 auto; padding: 20px 24px; display: flex; gap: 60px; flex-wrap: wrap; box-sizing: border-box; transform: rotate(0.4deg);">
+      <div style="max-width: 1180px; margin: 0 auto; padding: 20px 48px; display: flex; gap: 60px; flex-wrap: wrap; box-sizing: border-box; transform: rotate(0.4deg);">
         <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">ROLE</div><div style="font-size: 14.5px; font-weight: 700;">Product Designer</div></div>
         <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">TYPE</div><div style="font-size: 14.5px; font-weight: 700;">Web Application</div></div>
         <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">FOCUS</div><div style="font-size: 14.5px; font-weight: 700;">Social Impact</div></div>
@@ -293,7 +281,7 @@
       </div>
     </div>
 
-    <div style="max-width: 1340px; margin: 0 auto; padding: 90px 24px; box-sizing: border-box; display: flex; gap: 60px; align-items: flex-start;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 90px 48px; box-sizing: border-box; display: flex; gap: 60px; align-items: flex-start;">
       <div style="width: 190px; flex-shrink: 0; position: sticky; top: 96px;">
         <div style="font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 18px;">ON THIS PAGE</div>
         <sc-for list="{{ pageNav }}" as="n" hint-placeholder-count="4">
@@ -306,11 +294,11 @@
       <div style="flex: 1; min-width: 0;">
       <div id="case-challenge" style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">01</div>
       <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 26px; transform: rotate(-0.5deg);">THE CHALLENGE</h2>
-      <div style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 16px;"><div>Public benefits can change someone's life—but figuring out what you qualify for often feels like solving a puzzle with missing pieces.</div><div><br></div><div>Rules vary by state. Eligibility depends on dozens of factors. Case managers are overwhelmed, and people who qualify often never apply.</div><div><br></div><div>Our challenge wasn't just to build another screening tool.</div><div><br></div></div>
-      
-      <p style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;">It was to build something people could actually trust.</p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 760px;">
+      <p style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 16px;">Millions of individuals who qualify for public benefits programs — food assistance, healthcare, housing support, childcare subsidies, and more — never access them. The barriers aren't just logistical; they're deeply rooted in complexity, language, and systemic inaccessibility.</p>
+      <p style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;">The challenge was to design an experience that meets people where they are — one that feels human, trustworthy, and empowering rather than bureaucratic and overwhelming.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 760px;">
         <sc-for list="{{ challengeStats }}" as="s" hint-placeholder-count="3">
-          <div style="background: {{ panelBg }}; padding: 22px; border-left: 5px solid {{ s.color }}; transform: rotate({{ s.rotate }}deg); border-radius: 15px;">
+          <div style="background: {{ panelBg }}; padding: 22px; border-left: 5px solid {{ s.color }}; transform: rotate({{ s.rotate }}deg);">
             <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; color: {{ s.color }};">{{ s.num }}</div>
             <div style="font-size: 12.5px; color: #6b6764; margin-top: 6px; line-height: 1.4;">{{ s.label }}</div>
           </div>
@@ -320,10 +308,10 @@
       <div id="case-role" style="margin-top: 90px;">
         <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">02</div>
         <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 26px; transform: rotate(0.5deg);">MY ROLE</h2>
-        <div style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;"><div>I was the product designer responsible for turning policy (for SNAP, WIC, TANF, LIHEAP, and CAPS) into product.</div><div><br></div><div>From discovery through launch, I partnered with leadership, engineers, and on-staff policy experts to define what we should build, why it mattered, and how to make it approachable for the people who needed it most.</div></div>
+        <p style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;">As the lead Product Designer, I owned the end-to-end design process from discovery through delivery — conducting user research, defining the information architecture, and designing all core product surfaces. I worked closely with engineers, policy researchers, and social workers to ensure the platform was both technically feasible and deeply aligned with real user needs.</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
           <sc-for list="{{ roleCards }}" as="r" hint-placeholder-count="4">
-            <div style="background: #fff; padding: 24px; box-shadow: 4px 5px 0 rgba(3,5,4,0.1); transform: rotate({{ r.rotate }}deg); border-radius: 15px; transition: transform 0.2s;" style-hover="transform: rotate(0deg) translateY(-4px);">
+            <div style="background: #fff; padding: 24px; box-shadow: 4px 5px 0 rgba(3,5,4,0.1); transform: rotate({{ r.rotate }}deg); transition: transform 0.2s;" style-hover="transform: rotate(0deg) translateY(-4px);">
               <div style="font-size: 14.5px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;"><span style="width: 8px; height: 8px; background: {{ r.color }}; display: inline-block;"></span>{{ r.title }}</div>
               <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
                 <div style="font-size: 13px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 14px; position: relative;"><span style="position: absolute; left: 0;">–</span>{{ it }}</div>
@@ -336,101 +324,32 @@
       <div id="case-components" style="margin-top: 90px;">
         <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">03</div>
         <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 40px; transform: rotate(-0.5deg);">FEATURED COMPONENTS</h2>
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #72E2EF; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Eligibility Screening Tool</div>
+        <sc-for list="{{ featuredComponents }}" as="c" hint-placeholder-count="5">
+          <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
+            <div style="flex: 1 1 320px; min-width: 280px;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+                <span style="width: 6px; height: 26px; background: {{ c.color }}; display: inline-block;"></span>
+                <div style="font-size: 21px; font-weight: 700;">{{ c.title }}</div>
+              </div>
+              <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">{{ c.desc }}</p>
+              <sc-for list="{{ c.bullets }}" as="b" hint-placeholder-count="4">
+                <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: {{ c.color }};">◆</span>{{ b }}</div>
+              </sc-for>
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">Making complicated questions feel simple.</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">The eligibility engine evaluates hundreds of policy rules behind the scenes—but users shouldn't have to think about any of that. I redesigned the screening experience to guide people one step at a time using plain language, progressive disclosure, and conversational flows.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Reduced cognitive load</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Plain-language questions</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Built for multiple state policies</div>
-          </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(-1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-eligibility" shape="rect" fit="cover" src="./macbook-pro---56-mrnc5y4y-xme0.png" placeholder="Drop Eligibility Screening image"></image-slot>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #FF49A4; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Personalized Results</div>
+            <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate({{ c.rotate }}deg); box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <img src="{{ c.img }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">People don't need more data—they need clarity.</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">Rather than overwhelming users with program details, I designed a results experience that highlights estimated monthly benefit values and organizes recommendations into a clear, approachable summary. The goal was simple: help people understand the potential impact in seconds and feel motivated to take the next step.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #FF49A4;">◆</span>Estimated monthly benefit amount</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #FF49A4;">◆</span>Personalized benefit recommendations</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #FF49A4;">◆</span>Real-time eligibility logic processes results</div>
           </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-results" shape="rect" fit="cover" src="./image-156-mrncdbsr-37uk.png" placeholder="Drop Personalized Results image"></image-slot>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #E8FF00; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Support Plans</div>
-            </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">From "You're eligible" to "Here's exactly what to do."</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">One of my favorite features. I helped design Support Plans that turn eligibility results into personalized action steps written in clear, easy-to-read language. Instead of overwhelming users with government websites, we give them a practical checklist tailored to their situation.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #E8FF00;">◆</span>Personalized next steps</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #E8FF00;">◆</span>Available anytime after screening</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #E8FF00;">◆</span>Readability optimized for accessibility</div>
-          </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(-1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-support" shape="rect" fit="cover" src="./image-204-mrncee7l-uyzh.png" placeholder="Drop Support Plans image"></image-slot>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #4BF33F; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Admin Dashboard</div>
-            </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">Helping staff spend less time searching—and more time supporting.</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">Case managers need quick answers, not more dashboards. I designed an admin experience that gives staff visibility into client progress, eligibility outcomes, and platform activity in one place. By surfacing the right information at the right time, the dashboard supports faster decision-making and more informed client conversations.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #4BF33F;">◆</span>Organization-wide reporting</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #4BF33F;">◆</span>Role-based dashboard experience</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #4BF33F;">◆</span>Client progress tracking</div>
-          </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-admin" shape="rect" fit="cover" src="./customer_demo_overview_text_icon_sidebar-mrncfidp-6ica.png" placeholder="Drop Admin Dashboard image"></image-slot>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #72E2EF; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Client Dashboard</div>
-            </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">Add a subheading</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">Applying for benefits is rarely completed in one sitting. I designed a personalized dashboard that helps users return with confidence by keeping their results, Support Plan, and recommended resources in one place. Instead of asking people to remember what comes next, the dashboard keeps the journey organized from start to finish.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Personalized home experience</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Saved Support Plans</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Progress tracking</div>
-          </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(-1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-client" shape="rect" fit="cover" src="./student-dashboard-home-mrncg043-99k7.png" placeholder="Drop Client Dashboard image"></image-slot>
-          </div>
-        </div>
+        </sc-for>
       </div>
 
       <div id="case-outcomes" style="margin-top: 20px;">
         <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">04</div>
         <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 26px; transform: rotate(0.5deg);">THE OUTCOMES</h2>
-        <div style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;"><p data-start="4446" data-end="4496" class="PDq2pG_selectionAnchorContainer">This project wasn't just about launching software.<span aria-hidden="true" class="PDq2pG_selectionAnchor"></span></p>
-<p data-start="4498" data-end="4629">It helped organizations identify more eligible clients, simplify case management, and connect more people with essential resources.</p>
-<p data-start="4631" data-end="4767">Just as importantly, it showed how thoughtful product design can transform complicated policy into something people actually understand.</p></div>
+        <p style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;">By centering the needs of people navigating complex systems, the platform achieved measurable improvements in access, comprehension, and completion — proving that thoughtful design can meaningfully reduce the gap between eligible individuals and the support they deserve.</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin-bottom: 40px;">
           <sc-for list="{{ outcomeStats }}" as="s" hint-placeholder-count="4">
-            <div style="text-align: center; padding: 22px 12px; background: {{ panelBg }}; transform: rotate({{ s.rotate }}deg); border-radius: 15px;">
+            <div style="text-align: center; padding: 22px 12px; background: {{ panelBg }}; transform: rotate({{ s.rotate }}deg);">
               <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 32px; color: {{ s.color }};">{{ s.num }}</div>
               <div style="font-size: 12px; color: #6b6764; margin-top: 6px; line-height: 1.4;">{{ s.label }}</div>
             </div>
@@ -438,7 +357,7 @@
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
           <sc-for list="{{ outcomeCards }}" as="o" hint-placeholder-count="4">
-            <div style="background: #fff; padding: 22px; border-top: 4px solid {{ o.color }}; box-shadow: 3px 4px 0 rgba(3,5,4,0.08); border-radius: 15px;">
+            <div style="background: #fff; padding: 22px; border-top: 4px solid {{ o.color }}; box-shadow: 3px 4px 0 rgba(3,5,4,0.08);">
               <div style="font-size: 14.5px; font-weight: 700; margin-bottom: 10px;">{{ o.title }}</div>
               <div style="font-size: 13px; line-height: 1.6; color: #6b6764;">{{ o.text }}</div>
             </div>
@@ -448,9 +367,9 @@
       </div>
     </div>
 
-    <div style="background: #030504; text-align: center; padding: 70px 24px; box-sizing: border-box;">
+    <div style="background: #030504; text-align: center; padding: 70px 48px; box-sizing: border-box;">
       <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 22px;">EXPLORE MORE</div>
-      <span onClick="{{ goPortfolio }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 14px 28px; border: 1.5px solid #fff; color: #fff; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s; border-radius: 15px;" style-hover="transform: rotate(1deg); background: #72E2EF; border-color: #72E2EF; color: #030504;">← BACK TO PORTFOLIO</span>
+      <span onClick="{{ goPortfolio }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 14px 28px; border: 1.5px solid #fff; color: #fff; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s;" style-hover="transform: rotate(1deg); background: #72E2EF; border-color: #72E2EF; color: #030504;">← BACK TO PORTFOLIO</span>
     </div>
   </div>
   </sc-if>
@@ -492,7 +411,7 @@
             <div style="width: 14px; height: 14px; border-radius: 50%; border: 3px solid {{ e.color }}; flex-shrink: 0; margin-top: 4px;"></div>
             <div>
               <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
-                <div style="font-size: 16px; font-weight: 700;"><a href="https://www.best-fit.app/" target="_blank" style="color: inherit; text-decoration: underline;">{{ e.company }}</a></div>
+                <div style="font-size: 16px; font-weight: 700;">{{ e.company }}</div>
                 <div style="font-size: 12.5px; color: #9a9591; white-space: nowrap;">{{ e.dates }}</div>
               </div>
               <div style="font-size: 14px; font-style: italic; color: #58534f; margin-top: 4px;">{{ e.role }}</div>
@@ -518,7 +437,7 @@
       </div>
 
       <div style="flex: 1 1 280px; min-width: 260px;">
-        <div style="background: #030504; padding: 26px; transform: rotate(1.5deg); margin-bottom: 30px; box-shadow: 4px 5px 0 rgba(3,5,4,0.15); border-radius: 15px;">
+        <div style="background: #030504; padding: 26px; transform: rotate(1.5deg); margin-bottom: 30px; box-shadow: 4px 5px 0 rgba(3,5,4,0.15);">
           <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #72E2EF; margin-bottom: 16px;">CONTACT</div>
           <div style="font-size: 14px; color: #fff; margin-bottom: 8px;">(470) 338-3949</div>
           <div style="font-size: 14px; color: #fff; margin-bottom: 8px;">avanti.pointer@gmail.com</div>
@@ -529,7 +448,7 @@
           <div style="font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #030504;">PROGRAMS &amp; SOFTWARE</div>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <sc-for list="{{ programChips }}" as="p" hint-placeholder-count="10">
-              <span style="font-size: 12px; font-weight: 500; padding: 7px 13px; border: 1.5px solid #ddd8d3; border-radius: 15px; transform: rotate({{ p.rotate }}deg);">{{ p.name }}</span>
+              <span style="font-size: 12px; font-weight: 500; padding: 7px 13px; border: 1.5px solid #ddd8d3; transform: rotate({{ p.rotate }}deg);">{{ p.name }}</span>
             </sc-for>
           </div>
         </div>
@@ -569,11 +488,11 @@
 
     <div style="max-width: 720px; margin: 0 auto; padding: 70px 48px 110px; box-sizing: border-box;">
       <sc-if value="{{ contactSubmitted }}" hint-placeholder-val="{{ false }}">
-        <div style="background: #fff; padding: 48px 40px; text-align: center; box-shadow: 5px 6px 0 rgba(3,5,4,0.1); transform: rotate(-0.6deg); border-radius: 15px;">
+        <div style="background: #fff; padding: 48px 40px; text-align: center; box-shadow: 5px 6px 0 rgba(3,5,4,0.1); transform: rotate(-0.6deg);">
           <div style="font-size: 46px; margin-bottom: 14px;">🎉</div>
           <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; margin: 0 0 10px;">MESSAGE SENT!</h2>
           <p style="font-size: 15px; color: #454141; margin: 0 0 24px;">Thanks, {{ contactForm.name }}! I'll reply to {{ contactForm.email }} soon — probably with too many exclamation points and at least one smiley.</p>
-          <span onClick="{{ resetContact }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 12px 22px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s; border-radius: 15px;" style-hover="transform: rotate(-1deg); background: #72E2EF;">SEND ANOTHER →</span>
+          <span onClick="{{ resetContact }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 12px 22px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s;" style-hover="transform: rotate(-1deg); background: #72E2EF;">SEND ANOTHER →</span>
         </div>
       </sc-if>
       <sc-if value="{{ contactNotSubmitted }}" hint-placeholder-val="{{ true }}">
@@ -581,11 +500,11 @@
           <div style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 220px; transform: rotate(-0.4deg);">
               <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">YOUR NAME</label>
-              <input required="{{ true }}" value="{{ contactForm.name }}" onChange="{{ setContactName }}" placeholder="Jamie Doodle" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; font-family: inherit; outline: none; border-radius: 15px;">
+              <input required="{{ true }}" value="{{ contactForm.name }}" onChange="{{ setContactName }}" placeholder="Jamie Doodle" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; font-family: inherit; outline: none;">
             </div>
             <div style="flex: 1 1 220px; transform: rotate(0.4deg);">
               <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">YOUR EMAIL</label>
-              <input required="{{ true }}" type="email" value="{{ contactForm.email }}" onChange="{{ setContactEmail }}" placeholder="jamie@doodle.com" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; font-family: inherit; outline: none; border-radius: 15px;">
+              <input required="{{ true }}" type="email" value="{{ contactForm.email }}" onChange="{{ setContactEmail }}" placeholder="jamie@doodle.com" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; font-family: inherit; outline: none;">
             </div>
           </div>
 
@@ -593,17 +512,17 @@
             <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">WHAT'S THIS ABOUT?</label>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               <sc-for list="{{ contactReasons }}" as="r" hint-placeholder-count="4">
-                <span onClick="{{ r.onClick }}" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 16px; border: 1.5px solid #030504; cursor: pointer; background: {{ r.bg }}; color: #030504; border-radius: 15px; transform: rotate({{ r.rotate }}deg); transition: transform 0.15s;" style-hover="transform: rotate(0deg) translateY(-2px);">{{ r.label }}</span>
+                <span onClick="{{ r.onClick }}" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 16px; border: 1.5px solid #030504; cursor: pointer; background: {{ r.bg }}; color: #030504; transform: rotate({{ r.rotate }}deg); transition: transform 0.15s;" style-hover="transform: rotate(0deg) translateY(-2px);">{{ r.label }}</span>
               </sc-for>
             </div>
           </div>
 
           <div style="transform: rotate(0.3deg);">
             <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">THE DETAILS</label>
-            <textarea required="{{ true }}" value="{{ contactForm.message }}" onChange="{{ setContactMessage }}" placeholder="Tell me about your project, your timeline, or just say hi..." rows="6" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; font-family: inherit; outline: none; border-radius: 15px; resize: vertical;"></textarea>
+            <textarea required="{{ true }}" value="{{ contactForm.message }}" onChange="{{ setContactMessage }}" placeholder="Tell me about your project, your timeline, or just say hi..." rows="6" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; font-family: inherit; outline: none; resize: vertical;"></textarea>
           </div>
 
-          <button type="submit" style="align-self: flex-start; background: #72E2EF; border: none; padding: 16px 40px; border-radius: 15px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: rotate(1deg) translateY(-3px); box-shadow: 4px 6px 0 #FF49A4;">SEND IT →</button>
+          <button type="submit" style="align-self: flex-start; background: #72E2EF; border: none; padding: 16px 40px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: rotate(1deg) translateY(-3px); box-shadow: 4px 6px 0 #FF49A4;">SEND IT →</button>
         </form>
       </sc-if>
 
@@ -663,11 +582,6 @@ class Component extends DCLogic {
   setContactReason = (reason) => () => this.setState({ contactReason: reason });
   submitContact = (e) => {
     e.preventDefault();
-    const { name, email, message } = this.state.contactForm;
-    const reason = this.state.contactReason;
-    const subject = `Portfolio inquiry${reason ? ' — ' + reason : ''} from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\n${reason ? 'About: ' + reason + '\n' : ''}\nMessage:\n${message}`;
-    window.location.href = `mailto:avanti.pointer@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     this.setState({ contactSubmitted: true });
   };
   resetContact = () => {
@@ -685,12 +599,12 @@ class Component extends DCLogic {
     const page = this.state.page;
 
     const portfolioWorkRaw = [
-      { id: 'benefits-nav', tag: 'PRODUCT DESIGN', color: CYAN, title: 'Benefits Navigation Platform', year: '2024', tags: ['PRODUCT DESIGN', 'WEB APPLICATION', 'UI DESIGN'], img: 'assets/benefit-nav-hero.png', rotate: -1, hasCase: true },
-      { id: 'bestfit', tag: 'WEB DESIGN', color: PINK, title: 'BestFit, Inc. Web Redesign', year: '2021–2023', tags: ['WEB DESIGN', 'UX DESIGN', 'PRODUCT STRATEGY'], img: 'assets/bestfit-web2.jpg', rotate: -2 },
-      { id: 'ai', tag: 'STRATEGY & RESEARCH', color: GREEN, title: 'AI Initiative (Gitlab)', year: '2025', tags: ['STRATEGY & RESEARCH', 'AI/ML DESIGN', 'ENTERPRISE UX'], img: 'assets/ai-initiative2.jpg', rotate: 2 },
-      { id: 'cliff', tag: 'PRODUCT DESIGN', color: YELLOW, title: 'Benefit Cliff Tool', year: '2026', tags: ['PRODUCT DESIGN', 'SOCIAL IMPACT', 'STRATEGY & RESEARCH'], img: 'assets/benefit-cliff-tool.jpg', rotate: -1 },
-      { id: 'ohio', tag: 'PRODUCT STRATEGY', color: CYAN, title: 'Ohio Benefits Expansion', year: '2026', tags: ['PRODUCT STRATEGY', 'DIGITAL STRATEGY', 'ANALYTICS'], img: 'assets/ohio-benefits.jpg', rotate: 2 },
-      { id: 'illustration', tag: 'ILLUSTRATION', color: PINK, title: 'Illustration Library', year: '2020', tags: ['ILLUSTRATION', 'PACKAGING', 'PRINT DESIGN'], img: 'assets/illustration-library.jpg', rotate: -2 },
+      { id: 'benefits-nav', tag: 'PRODUCT DESIGN', color: CYAN, title: 'Benefits Navigation Platform', year: '2021', tags: ['PRODUCT DESIGN', 'WEB APPLICATION', 'UI DESIGN'], img: 'assets/benefit-nav-hero.png', rotate: -1, hasCase: true },
+      { id: 'bestfit', tag: 'WEB DESIGN', color: PINK, title: 'BestFit, Inc. Web Redesign', year: '2021–Present', tags: ['WEB DESIGN', 'UX DESIGN', 'PRODUCT STRATEGY'], img: 'assets/bestfit-web2.jpg', rotate: -2 },
+      { id: 'ai', tag: 'STRATEGY & RESEARCH', color: GREEN, title: 'AI Initiative (Gitlab)', year: '2023', tags: ['STRATEGY & RESEARCH', 'AI/ML DESIGN', 'ENTERPRISE UX'], img: 'assets/ai-initiative2.jpg', rotate: 2 },
+      { id: 'cliff', tag: 'PRODUCT DESIGN', color: YELLOW, title: 'Benefit Cliff Tool', year: '2020', tags: ['PRODUCT DESIGN', 'SOCIAL IMPACT', 'STRATEGY & RESEARCH'], img: 'assets/benefit-cliff-tool.jpg', rotate: -1 },
+      { id: 'ohio', tag: 'PRODUCT STRATEGY', color: CYAN, title: 'Ohio Benefits Expansion', year: '2022', tags: ['PRODUCT STRATEGY', 'DIGITAL STRATEGY', 'ANALYTICS'], img: 'assets/ohio-benefits.jpg', rotate: 2 },
+      { id: 'illustration', tag: 'ILLUSTRATION', color: PINK, title: 'Illustration Library', year: '2019–2021', tags: ['ILLUSTRATION', 'PACKAGING', 'PRINT DESIGN'], img: 'assets/illustration-library.jpg', rotate: -2 },
     ];
     const portfolioWork = portfolioWorkRaw.map(it => ({
       ...it,
@@ -730,12 +644,12 @@ class Component extends DCLogic {
 
     const personalFacts = [
       { icon: '🎧', label: 'ON REPEAT', value: 'Upbeat playlists that make deadlines feel like a dance break', color: PINK, rotate: -1.5 },
-      { icon: '☕', label: 'FUELED BY', value: 'An unreasonable sweet cup of iced coffee', color: CYAN, rotate: 1.5 },
+      { icon: '☕', label: 'FUELED BY', value: 'An unreasonable number of iced oat-milk lattes', color: CYAN, rotate: 1.5 },
       { icon: '✏️', label: 'HAPPIEST WHEN', value: 'A messy idea finally clicks and the whole team lights up', color: PINK, rotate: -1 },
       { icon: '😄', label: 'MY WHOLE THING', value: 'Making work feel human — and getting people to smile along the way', color: CYAN, rotate: 1 },
     ];
 
-    const toolNames = ['Figma', 'Claude AI', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Adobe After Effects', 'Dreamweaver', 'Google Suite', 'Microsoft Suite', 'Slack', 'Google Ads'];
+    const toolNames = ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Adobe After Effects', 'Figma', 'Dreamweaver', 'Google Suite', 'Microsoft Suite', 'Slack', 'Google Ads'];
     const toolColors = [CYAN, PINK, YELLOW, GREEN];
     const toolChips = toolNames.map((name, i) => ({ name, rotate: (i % 2 === 0 ? -1.5 : 1.5), color: toolColors[i % 4] }));
     const programChips = toolNames.map((name, i) => ({ name, rotate: (i % 2 === 0 ? -1 : 1) }));
@@ -747,37 +661,37 @@ class Component extends DCLogic {
     ];
 
     const roleCards = [
-      { title: 'Product Strategy', color: CYAN, rotate: -1, items: ['Defined MVP scope', 'Prioritized roadmap features', 'Wrote product requirements'] },
-      { title: 'Research', color: PINK, rotate: 1, items: ['User interviews', 'Usability testing', 'Policy & eligibility research'] },
-      { title: 'Design & Prototyping', color: YELLOW, rotate: -1, items: ['Wireframes & interactive prototypes', 'End-to-end user flows', 'Developer handoff'] },
-      { title: 'Cross-functional Leadership', color: GREEN, rotate: 1, items: ['Engineering collaboration', 'Stakeholder alignment', 'Client onboarding'] },
+      { title: 'Research & Discovery', color: CYAN, rotate: -1, items: ['User interviews with benefits-seekers and case workers', 'Competitive audit of existing benefit tools', 'Journey mapping and pain point synthesis'] },
+      { title: 'Strategy & Framing', color: PINK, rotate: 1, items: ['Defined design principles and accessibility standards', 'Developed information architecture for 30+ benefit programs', 'Facilitated stakeholder alignment workshops'] },
+      { title: 'Design & Prototyping', color: YELLOW, rotate: -1, items: ['Wireframes, high-fidelity mockups, and interactive prototypes', 'Component library and design system documentation', 'Usability testing and iterative refinement'] },
+      { title: 'Implementation Support', color: GREEN, rotate: 1, items: ['Developed handoff with detailed specs and annotations', 'QA review against design intent', 'Post-launch monitoring and iteration planning'] },
     ];
 
     const featuredComponents = [
-      { title: 'Eligibility Screening Tool', color: CYAN, rotate: -1, sub: 'Making complicated questions feel simple.', img: 'assets/case-eligibility-tool.jpg', desc: 'The eligibility engine evaluates hundreds of policy rules behind the scenes—but users shouldn\'t have to think about any of that.\n\nI redesigned the screening experience to guide people one step at a time using plain language, progressive disclosure, and conversational flows.', bullets: ['Reduced cognitive load', 'Plain-language questions', 'Built for multiple state policies'] },
-      { title: 'Personalized Results', color: PINK, rotate: 1, sub: 'People don\'t need more data—they need clarity.', img: 'assets/case-results.jpg', desc: 'Rather than overwhelming users with program details, I designed a results experience that highlights estimated monthly benefit values and organizes recommendations into a clear, approachable summary. The goal was simple: help people understand the potential impact in seconds and feel motivated to take the next step.', bullets: ['Estimated monthly benefit amount', 'Personalized benefit recommendations', 'Real-time eligibility logic processes results'] },
-      { title: 'Support Plans', color: YELLOW, rotate: -1, sub: 'From "You\'re eligible" to "Here\'s exactly what to do."', img: 'assets/case-support-plans.jpg', desc: 'One of my favorite features.\n\nI helped design Support Plans that turn eligibility results into personalized action steps written in clear, easy-to-read language.\n\nInstead of overwhelming users with government websites, we give them a practical checklist tailored to their situation.', bullets: ['Personalized next steps', 'Available anytime after screening', 'Readability optimized for accessibility'] },
-      { title: 'Admin Dashboard', color: GREEN, rotate: 1, sub: 'Helping staff spend less time searching—and more time supporting.', img: 'assets/case-admin-dashboard.jpg', desc: 'Case managers need quick answers, not more dashboards.\n\nI designed an admin experience that gives staff visibility into client progress, eligibility outcomes, and platform activity in one place. By surfacing the right information at the right time, the dashboard supports faster decision-making and more informed client conversations', bullets: ['Organization-wide reporting', 'Role-based dashboard experience', 'Client progress tracking'] },
-      { title: 'Client Dashboard', color: CYAN, rotate: -1, sub: 'Add a subheading', img: 'assets/case-client-dashboard.jpg', desc: 'Applying for benefits is rarely completed in one sitting. I designed a personalized dashboard that helps users return with confidence by keeping their results, Support Plan, and recommended resources in one place.\n\n\n\n\nInstead of asking people to remember what comes next, the dashboard keeps the journey organized from start to finish.', bullets: ['Personalized home experience', 'Saved Support Plans', 'Progress tracking'] },
+      { title: 'Eligibility Screening Tool', color: CYAN, rotate: -1, img: 'assets/case-eligibility-tool.jpg', desc: 'A conversational, step-by-step screening experience that asks plain-language questions to determine which benefit programs a user may qualify for — without requiring them to understand complex eligibility rules.', bullets: ['Progressive disclosure design reduces cognitive load by surfacing only relevant questions', 'Plain-language copy tested with users at a 6th-grade reading level', 'Real-time eligibility logic built in partnership with policy researchers', 'Accessible to users with low digital literacy and screen reader support'] },
+      { title: 'Personalized Results', color: PINK, rotate: 1, img: 'assets/case-results.jpg', desc: 'After screening, users receive a curated list of benefit programs matched to their situation — presented clearly with plain-language summaries, eligibility likelihood, and direct application links.', bullets: ['Results ranked by relevance and ease of access, not alphabetically', 'Each benefit card includes estimated value, requirements, and processing time', 'Save and share functionality for users working with case managers', 'Mobile-first layout optimized for users on low-bandwidth connections'] },
+      { title: 'Support Plans', color: YELLOW, rotate: -1, img: 'assets/case-support-plans.jpg', desc: 'A personalized roadmap that guides users through the steps needed to apply for or maintain their benefits — breaking complex multi-step processes into manageable tasks with clear status tracking.', bullets: ['Step-by-step task lists with document checklists and deadline reminders', 'Progress tracking across multiple simultaneous benefit applications', 'Contextual help and tooltips explaining required documentation', 'Integration with case worker tools for coordinated support'] },
+      { title: 'Admin Dashboard', color: GREEN, rotate: 1, img: 'assets/case-admin-dashboard.jpg', desc: 'A powerful back-office tool for program administrators and outreach coordinators to manage benefit listings, monitor platform usage, and identify gaps in access across different communities.', bullets: ['Real-time analytics on screening completions, program interest, and application drop-off', 'Benefit program management with version control for eligibility rule updates', 'Geographic heat maps identifying underserved communities and access streams', 'Role-based access controls for multi-organization deployments'] },
+      { title: 'Client Dashboard', color: CYAN, rotate: -1, img: 'assets/case-client-dashboard.jpg', desc: 'A personal home base for users to track their benefit status, upcoming deadlines, saved programs, and ongoing support plan — returning them to exactly where they left off across sessions.', bullets: ['Persistent application status across all active and pending benefits', 'Renewal reminders and re-screening prompts when life circumstances change', 'Document vault for storing required application materials', 'Direct messaging channel to connect with assigned case workers'] },
     ];
 
     const outcomeStats = [
-      { num: '5+', label: 'public benefit programs integrated into the screener', color: CYAN, rotate: -1 },
-      { num: '81%', label: 'of users successfully identified at least one new benefit they qualified for', color: PINK, rotate: 1 },
-      { num: '$401', label: 'average monthly benefits identified ', color: YELLOW, rotate: -1 },
-      { num: '161', label: 'hours in staff time saved completing eligibility interviews', color: GREEN, rotate: 1 },
+      { num: '3x', label: 'increase in benefit screening completions vs. prior tool', color: CYAN, rotate: -1 },
+      { num: '68%', label: 'of users successfully identified at least one new benefit they qualified for', color: PINK, rotate: 1 },
+      { num: '40%', label: 'reduction in application abandonment through guided support plans', color: YELLOW, rotate: -1 },
+      { num: '92%', label: 'user satisfaction score among caseworkers using this dashboard', color: GREEN, rotate: 1 },
     ];
 
     const outcomeCards = [
-      { title: 'Better Access', color: CYAN, text: 'More users successfully identified benefits they qualified for.' },
-      { title: 'Better Decisions', color: PINK, text: 'Case managers spent less time interpreting eligibility rules and more time supporting people.' },
-      { title: 'Better Experience', color: YELLOW, text: 'Complex government programs became approachable through plain language and thoughtful interaction design.' },
-      { title: 'Better Partnerships', color: GREEN, text: 'The platform expanded to support universities, nonprofits, and workforce organizations across multiple states.' },
+      { title: 'Expanded Access', color: CYAN, text: 'The platform successfully reached populations previously unable to navigate fragmented government benefit portals — including users with limited English proficiency and low digital literacy.' },
+      { title: 'Trusted by Caseworkers', color: PINK, text: 'Social workers and benefits coordinators adopted the admin dashboard as their primary coordination tool, reducing manual tracking overhead and improving client follow-through and trust.' },
+      { title: 'Scalable Design System', color: YELLOW, text: 'The component library and design patterns built for this platform were adapted across sister products, accelerating future feature development.' },
+      { title: 'Model for Equity-Centered Design', color: GREEN, text: "This research-informed, plain-language methodology became a reference framework for the team's subsequent social-impact work." },
     ];
 
     const experience = [
       { color: PINK, company: 'BestFit, Inc.', role: 'Product Designer', place: 'Atlanta, GA — B2B public benefits platform for higher education, workforce, and nonprofit organizations', dates: 'NOV 2022 – JULY 2026', bullets: ['Led end-to-end product design for the platform, translating complex federal and state policy into an intuitive eligibility screening experience.', 'Conducted user research, usability testing, and stakeholder interviews to validate solutions and inform product strategy.', 'Designed AI-powered Support Plans and Benefit Navigation experiences that simplified access to public benefits.', 'Defined product requirements with engineering and leadership to prioritize roadmap initiatives, scope MVPs, and deliver new features.', 'Created interactive prototypes, user flows, and developer-ready specs; supported enterprise rollouts including Clayton State University.'] },
-      { color: YELLOW, company: 'BestFit, Inc.', role: 'Graphic Designer & Marketing Coordinator', place: 'Atlanta, GA', dates: 'APRIL 2020 – NOVEMBER 2022', bullets: ['Coordinated client communications and outreach materials.', 'Organized project files and maintained digital records.', 'Created accessible materials for workforce, nonprofit, and higher education organizations.', 'Collaborated with internal teams to meet project deadlines.'] },
+      { color: YELLOW, company: 'BestFit, Inc.', role: 'Graphic Designer & Marketing Coordinator', place: 'Atlanta, GA', dates: 'APRIL 2020 – NOVEMBER 2022', bullets: ['Managed multiple design projects across marketing, branding, and digital experiences.', 'Collaborated across sales, product, and leadership to deliver accessible, user-centered communications that support engagement.'] },
     ];
 
     const contactReasonLabels = ['A PROJECT', 'FULL-TIME ROLE', 'JUST SAYING HI', 'SOMETHING ELSE'];
@@ -831,6 +745,465 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Portfolio - White bg";
+  // rAF raced with a short timeout: inside a cross-origin iframe (PrintMode),
+  // rAF can be throttled or paused even while the tab is focused, which would
+  // hang the scroll loop and never reach print(). Same pattern as
+  // buildExportSettleScript (export/shared.ts).
+  var raf = function () {
+    return Promise.race([
+      new Promise(function (r) { requestAnimationFrame(r); }),
+      new Promise(function (r) { setTimeout(r, 50); }),
+    ]);
+  };
+  var t0 = performance.now();
+  var mark = function (phase) {
+    var ms = Math.round(performance.now() - t0);
+    console.info('[autoprint]', phase, ms + 'ms');
+    try { parent.postMessage({ __omelette_autoprint: { phase: phase, ms: ms } }, '*'); } catch (e) {}
+  };
+  mark('start');
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    // A placeholder whose fetch failed (.sc-placeholder-error inside) keeps
+    // .sc-placeholder forever — don't wait on it. JS loop, not :has(), so an
+    // engine without :has() support can't throw out of the while and skip
+    // print() entirely.
+    var pendingPlaceholders = function () {
+      var all = settleRoot.querySelectorAll('.sc-placeholder'), n = 0;
+      for (var i = 0; i < all.length; i++)
+        if (!all[i].querySelector('.sc-placeholder-error')) n++;
+      return n;
+    };
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        pendingPlaceholders() === 0;
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  mark('settle-done' + (settleRoot ? ' (errs=' + settleRoot.querySelectorAll('.sc-placeholder-error').length + ' pending=' + pendingPlaceholders() + ')' : ''));
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    var scrollDeadline = Date.now() + 4000;
+    for (let y = 0; y <= full && Date.now() < scrollDeadline; y += step) {
+      window.scrollTo(0, y);
+      await raf();
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  mark('scroll-done');
+  try { await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]); } catch (e) {}
+  mark('fonts-done');
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await raf();
+    sweep();
+    await raf();
+  } catch (e) {}
+  // A document that owns its print CSS (the doc-page starter injects the
+  // meta at runtime; hand-rolled print designs author it) gets no automatic
+  // page geometry and keeps its forced breaks: strip the injected default
+  // @page — write time cannot see a runtime-injected meta — skip the frame
+  // override below, and skip the fakepage-flattening further down. What
+  // still applies: the print baseline and break-hygiene defaults (no @page
+  // in either; low specificity, so the document's own print CSS wins) and
+  // the break-inside relaxation on >page elements (avoid on those cannot
+  // be honored whoever authored it).
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+  if (ownsPrint) {
+    var dst = document.querySelector('style[data-omelette-print-defaults]');
+    if (dst && dst.textContent) {
+      dst.textContent = dst.textContent.replace(/@page\b[^{}]*\{[^}]*\}/, '');
+    }
+  }
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…} or declared print ownership
+  // via the meta above. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+  // Name-presence check, case-insensitive — the same contract as the
+  // instant-PDF path's runtime check in deck-stage-export.ts. The name is
+  // a string literal here because that file interpolates this script into
+  // its print script, so importing a shared constant from it would be a
+  // cycle; measure.test.ts pins the literal so the two cannot drift apart
+  // silently.
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage, ownsPrint: ownsPrint };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: off unless the page opts in via data-om-multi-frame on the
+  // stop element — the explicit opt-in is what guards against card grids
+  // and pricing tables that match the geometry but aren't separate
+  // canvases. Two ways to name the frames, explicit first:
+  // 1. Descendants marked data-om-frame-export (the social-frames starter
+  //    marks each asset frame; shells/panels around them are presentation,
+  //    so nesting is expected). Document order.
+  // 2. Fallback, no marked descendants: direct children with an authored px
+  //    width AND height (the original geometry heuristic).
+  // Frames may be different sizes (a gallery mixes 1080×1920 stories with
+  // 728×90 banners); data-om-frame-label rides along for export filenames.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var visOk = function (e) {
+      var cs; try { cs = getComputedStyle(e); } catch (err) { return false; }
+      return cs.display !== 'none' && cs.visibility !== 'hidden' && cs.position !== 'fixed';
+    };
+    // A frame's crop is its VISUAL box — never the scrollHeight-inflated
+    // rect that rectOf computes for page roots. Shadow-DOM hover controls
+    // (image-slot's Replace bar parks 29px below its host) and similar
+    // escaping UI contribute scrollable overflow to the frame, and the
+    // inflated height both squashes the nominal-size resize and drags
+    // content below the frame into the crop. Zoom-independent; bit every
+    // slot-bearing frame.
+    var frameRectOf = function (e) {
+      var r = e.getBoundingClientRect();
+      return { left: r.left + sx, top: r.top + sy, width: r.width, height: r.height };
+    };
+    var pushCand = function (list, e) {
+      if (!visOk(e)) return;
+      var rc = frameRectOf(e);
+      if (rc.width < 2 || rc.height < 2) return;
+      var lbl = e.getAttribute('data-om-frame-label');
+      if (lbl) rc.label = lbl;
+      list.push(rc);
+    };
+    var cands = [];
+    var marked = el.querySelectorAll('[data-om-frame-export]');
+    if (marked.length) {
+      for (var mk = 0; mk < marked.length; mk++) pushCand(cands, marked[mk]);
+    } else {
+      for (var k = 0; k < el.children.length; k++) {
+        var ch = el.children[k];
+        if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+        pushCand(cands, ch);
+      }
+    }
+    if (cands.length >= 2) {
+      return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (!ownsPrint && __m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          // An owns-print doc's forced breaks are intentional sheet
+          // boundaries, never fake-paged simulation — don't strip them.
+          // The break-inside relaxation above still applies: avoid on a
+          // >page element is impossible to honor whoever authored it.
+          if (
+            !ownsPrint &&
+            (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always')
+          ) {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  mark('print-calling');
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
 </script>
 </body>
 </html>
