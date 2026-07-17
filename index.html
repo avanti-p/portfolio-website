@@ -36,10 +36,10 @@
       <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 1px; color: #fff;">AVANTI POINTER</span>
     </div>
     <div style="display: flex; gap: 36px; align-items: center;">
-      <span onClick="{{ goHome }}" style="font-size: 13px; font-weight: 600; letter-spacing: 1.2px; cursor: pointer; color: {{ homeNavColor }}; transition: color 0.2s;">HOME</span>
-      <span onClick="{{ goPortfolio }}" style="font-size: 13px; font-weight: 600; letter-spacing: 1.2px; cursor: pointer; color: {{ portfolioNavColor }}; transition: color 0.2s;">PORTFOLIO</span>
-      <span onClick="{{ goResume }}" style="font-size: 13px; font-weight: 600; letter-spacing: 1.2px; cursor: pointer; color: {{ resumeNavColor }}; transition: color 0.2s;">RESUME</span>
-      <span onClick="{{ goContact }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); border-radius: 15px; transition: transform 0.2s;" style-hover="transform: rotate(2deg) scale(1.05);">SAY HI →</span>
+      <span onClick="{{ goHome }}" style="font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: {{ homeNavColor }}; transition: color 0.2s">HOME</span>
+      <span onClick="{{ goPortfolio }}" style="font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: {{ portfolioNavColor }}; transition: color 0.2s">PORTFOLIO</span>
+      <span onClick="{{ goResume }}" style="font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: {{ resumeNavColor }}; transition: color 0.2s">RESUME</span>
+      <span onClick="{{ goContact }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); border-radius: 15px; transition: transform 0.2s" style-hover="transform: rotate(2deg) scale(1.05);">SAY HI →</span>
     </div>
   </div>
 
@@ -62,7 +62,7 @@
           <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 18px; transform: rotate(-1deg);">PRODUCT DESIGNER · ATLANTA, GA · PROFESSIONALLY SMILEY</div>
           <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 76px; line-height: 0.98; margin: 0 0 22px; color: #fff;">
             <span style="display: inline-block; transform: rotate(-2deg);">HI, I'M</span><br>
-            <span style="display: inline-block; color: #72E2EF; transform: rotate(1deg);">AVANTI POINTER!</span>
+            <span style="display: inline-block; color: #72E2EF; transform: rotate(1deg);">AVANTI!</span>
           </h1>
           <p style="font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.78); margin: 0 0 36px; max-width: 500px;">A creative (and certifiably smiley) product designer who turns tangled problems into experiences people actually enjoy — one wireframe, one weird idea, and one very good playlist at a time. Big impact, bigger empathy.</p>
           <div style="display: flex; gap: 18px; flex-wrap: wrap;">
@@ -96,7 +96,7 @@
     <!-- ABOUT -->
     <div style="max-width: 1180px; margin: 0 auto; padding: 90px 48px 40px; box-sizing: border-box; display: flex; gap: 60px; flex-wrap: wrap;">
       <div style="flex: 1 1 420px; min-width: 320px;">
-        <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 14px;">ABOUT</div>
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #72E2EF; margin-bottom: 14px">ABOUT</div>
         <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; line-height: 1.05; margin: 0 0 24px; transform: rotate(-0.5deg);">DESIGN AS A<br>TOOL FOR GOOD<span style="color: #FF49A4;">.</span></h2>
         <p style="font-size: 15.5px; line-height: 1.75; color: #454141; margin: 0 0 18px;">Hello, hello! I'm a Product Designer with 6+ years leading UX strategy, research, and product design for mission-driven digital products — turning complex requirements into experiences people can actually navigate with confidence (and, ideally, a big smile).</p>
         <p style="font-size: 15.5px; line-height: 1.75; color: #454141; margin: 0 0 30px;">I lead UX strategy, research, and design for mission-driven products — partnering with engineering and leadership to ship accessible, human-centered work.</p>
@@ -104,7 +104,7 @@
       </div>
       <div style="flex: 1 1 420px; min-width: 320px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
         <sc-for list="{{ aboutSkills }}" as="skill" hint-placeholder-count="6">
-          <div style="background: #fff; padding: 20px; box-shadow: 3px 4px 0 rgba(3,5,4,0.1); transform: rotate({{ skill.rotate }}deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-4px);">
+          <div style="background: #fff; padding: 20px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate({{ skill.rotate }}deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-4px);">
             <div style="width: 10px; height: 10px; background: {{ skill.color }}; margin-bottom: 12px;"></div>
             <div style="font-size: 18px; font-weight: 700; line-height: 1.25;">{{ skill.name }}</div>
           </div>
@@ -126,14 +126,14 @@
     <!-- PERSONAL: A FEW THINGS ABOUT ME -->
     <div style="position: relative; max-width: 1180px; margin: 0 auto; padding: 60px 48px 90px; box-sizing: border-box;">
       <span style="position: absolute; top: 48px; right: 60px; font-size: 22px; color: #4BF33F; animation: twinkle 2.8s ease-in-out infinite; --r: 8deg;">✦</span>
-      <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #FF49A4; margin-bottom: 14px;">OFF THE CLOCK</div>
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #FF49A4; margin-bottom: 14px">OFF THE CLOCK</div>
       <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin: 0 0 12px; transform: rotate(-0.5deg);">A FEW THINGS<br>ABOUT ME</h2>
       <p style="font-size: 15.5px; line-height: 1.7; color: #454141; max-width: 560px; margin: 0 0 40px;">Because good design comes from real people — and I happen to be a pretty upbeat one. Here's what keeps me smiling between deadlines.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
         <sc-for list="{{ personalFacts }}" as="f" hint-placeholder-count="4">
-          <div style="position: relative; background: #fff; padding: 26px 22px; border-top: 6px solid {{ f.color }}; box-shadow: 4px 5px 0 rgba(3,5,4,0.1); transform: rotate({{ f.rotate }}deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
-            <div style="font-size: 30px; line-height: 1; margin-bottom: 14px;">{{ f.icon }}</div>
-            <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: {{ f.color }}; margin-bottom: 6px;">{{ f.label }}</div>
+          <div style="position: relative; background: #fff; padding: 26px 22px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate({{ f.rotate }}deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
+            
+            <div style="font-size: 13px; font-weight: 700; letter-spacing: 0px; color: {{ f.color }}; margin-bottom: 6px">{{ f.label }}</div>
             <div style="font-size: 14.5px; font-weight: 600; line-height: 1.45;">{{ f.value }}</div>
           </div>
         </sc-for>
@@ -145,14 +145,14 @@
       <div style="max-width: 1180px; margin: 0 auto;">
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 16px;">
           <div>
-            <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #FF49A4; margin-bottom: 14px;">SELECTED PROJECTS</div>
+            <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #FF49A4; margin-bottom: 14px">SELECTED PROJECTS</div>
             <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin: 0; transform: rotate(0.5deg);">FEATURED WORK</h2>
           </div>
-          <span onClick="{{ goPortfolio }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1px; padding: 12px 20px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s; border-radius: 15px;" style-hover="transform: rotate(1deg); background: #72E2EF;">ALL PROJECTS →</span>
+          <span onClick="{{ goPortfolio }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1px; padding: 12px 20px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(-1deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(1deg); background: #72E2EF;">ALL PROJECTS →</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px;">
-          <div onClick="{{ goCase }}" style="background: #fff; transform: rotate(-2deg); transition: transform 0.25s, box-shadow 0.25s; cursor: pointer; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
-            <div style="position: relative; height: 200px; overflow: hidden;">
+          <div onClick="{{ goCase }}" style="background: #fff; transform: rotate(-2deg); transition: transform 0.25s, box-shadow 0.25s; cursor: pointer; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); border-radius: 15px; overflow: hidden" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
+            <div style="position: relative; height: 300px; overflow: hidden;">
               <image-slot id="home-feat-1" shape="rect" fit="cover" src="./customer_demo_overview_text_icon_sidebar-mrnjg9t2-3hs2.png" placeholder="Drop Benefit Navigation image"></image-slot>
               <span style="position: absolute; top: 14px; left: 14px; background: #72E2EF; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg); z-index: 2;">PRODUCT DESIGN</span>
             </div>
@@ -162,8 +162,8 @@
             </div>
           </div>
 
-          <div style="background: #fff; transform: rotate(1deg); transition: transform 0.25s, box-shadow 0.25s; cursor: default; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
-            <div style="position: relative; height: 200px; overflow: hidden;">
+          <div style="background: #fff; transform: rotate(1deg); transition: transform 0.25s, box-shadow 0.25s; cursor: default; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); border-radius: 15px; overflow: hidden" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
+            <div style="position: relative; height: 300px; overflow: hidden;">
               <image-slot id="home-feat-2" shape="rect" fit="cover" src="assets/bestfit-web.jpg" placeholder="Drop BestFit Web Redesign image"></image-slot>
               <span style="position: absolute; top: 14px; left: 14px; background: #FF49A4; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg); z-index: 2;">WEB DESIGN</span>
             </div>
@@ -173,8 +173,8 @@
             </div>
           </div>
 
-          <div style="background: #fff; transform: rotate(-1deg); transition: transform 0.25s, box-shadow 0.25s; cursor: default; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
-            <div style="position: relative; height: 200px; overflow: hidden;">
+          <div style="background: #fff; transform: rotate(-1deg); transition: transform 0.25s, box-shadow 0.25s; cursor: default; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); border-radius: 15px; overflow: hidden" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 8px 10px 0 rgba(3,5,4,0.18);">
+            <div style="position: relative; height: 300px; overflow: hidden;">
               <image-slot id="home-feat-3" shape="rect" fit="cover" src="assets/ai-initiative.jpg" placeholder="Drop AI Initiative image"></image-slot>
               <span style="position: absolute; top: 14px; left: 14px; background: #E8FF00; color: #030504; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; transform: rotate(-2deg); z-index: 2;">STRATEGY &amp; RESEARCH</span>
             </div>
@@ -189,7 +189,7 @@
 
     <!-- TOOLS -->
     <div style="max-width: 1180px; margin: 0 auto; padding: 70px 48px; text-align: center; box-sizing: border-box;">
-      <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #4BF33F; margin-bottom: 28px;">TOOLS &amp; SOFTWARE (MY TRUSTY SIDEKICKS)</div>
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #4BF33F; margin-bottom: 28px">TOOLS &amp; SOFTWARE (MY TRUSTY SIDEKICKS)</div>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
         <sc-for list="{{ toolChips }}" as="tool" hint-placeholder-count="10">
           <span style="font-size: 13.5px; font-weight: 500; padding: 10px 20px; border: 1.5px solid #ddd8d3; border-radius: 15px; transform: rotate({{ tool.rotate }}deg); transition: transform 0.2s, border-color 0.2s;" style-hover="transform: rotate(0deg) scale(1.06); border-color: {{ tool.color }};">{{ tool.name }}</span>
@@ -215,11 +215,11 @@
   <!-- ============================================================ -->
   <sc-if value="{{ isPortfolio }}">
   <div data-screen-label="Portfolio">
-    <div style="position: relative; background: #030504; padding: 70px 48px 44px; box-sizing: border-box; overflow: hidden;">
+    <div style="position: relative; background: #030504; padding: 50px 48px 44px; box-sizing: border-box; overflow: hidden">
       <span style="position: absolute; top: 30px; right: 60px; font-size: 24px; color: #FF49A4; animation: float-y 4.5s ease-in-out infinite; --r: 10deg;">+</span>
       <span style="position: absolute; bottom: 24px; right: 130px; font-size: 18px; color: #E8FF00; animation: twinkle 2.7s ease-in-out infinite; --r: -8deg;">✦</span>
       <div style="max-width: 1180px; margin: 0 auto;">
-        <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 14px;">WORK</div>
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #72E2EF; margin-bottom: 14px">WORK</div>
         <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; color: #fff; margin: 0 0 12px; transform: rotate(-1deg);">PORTFOLIO</h1>
         <p style="font-size: 15.5px; color: rgba(255,255,255,0.72); margin: 0; max-width: 500px;">Selected work — made with a lot of care and a lot of research. Grab a coffee and take a look around!</p>
       </div>
@@ -231,10 +231,10 @@
       </sc-for>
     </div>
 
-    <div style="max-width: 1180px; margin: 0 auto; padding: 40px 48px 110px; box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 44px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 40px 5px 110px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, 1fr); gap: 44px">
       <sc-for list="{{ filteredWork }}" as="item" hint-placeholder-count="6">
-        <div onClick="{{ item.onClick }}" style="background: #fff; transform: rotate({{ item.rotate }}deg); transition: transform 0.25s, box-shadow 0.25s; cursor: {{ item.cursor }}; box-shadow: 5px 6px 0 rgba(3,5,4,0.12); border-radius: 15px; overflow: hidden;" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 9px 11px 0 rgba(3,5,4,0.18);">
-          <div style="position: relative; height: 230px; overflow: hidden; border-top: 5px solid {{ item.color }};">
+        <div onClick="{{ item.onClick }}" style="background: #fff; transform: rotate({{ item.rotate }}deg); transition: transform 0.25s, box-shadow 0.25s; cursor: {{ item.cursor }}; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); border-radius: 15px; overflow: hidden" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 9px 11px 0 rgba(3,5,4,0.18);">
+          <div style="position: relative; height: 320px; overflow: hidden">
             <img src="{{ item.img }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div style="padding: 22px;">
@@ -335,89 +335,141 @@
 
       <div id="case-components" style="margin-top: 90px;">
         <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">03</div>
-        <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 40px; transform: rotate(-0.5deg);">FEATURED COMPONENTS</h2>
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #72E2EF; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Eligibility Screening Tool</div>
+        <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 8px; transform: rotate(-0.5deg);">FEATURED COMPONENTS</h2>
+        <p style="font-size: 15px; line-height: 1.7; color: #6b6764; max-width: 560px; margin: 0 0 44px;">A visual walkthrough of the pieces I designed. Drop in screens and process shots to let the work speak for itself.</p>
+
+        <!-- Eligibility Screening Tool -->
+        <div style="margin-bottom: 84px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="width: 8px; height: 34px; background: #72E2EF; display: inline-block; border-radius: 4px;"></span>
+              <div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Eligibility Screening Tool</div>
+                <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">Making complicated questions feel simple.</div>
+              </div>
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">Making complicated questions feel simple.</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">The eligibility engine evaluates hundreds of policy rules behind the scenes—but users shouldn't have to think about any of that. I redesigned the screening experience to guide people one step at a time using plain language, progressive disclosure, and conversational flows.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Reduced cognitive load</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Plain-language questions</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Built for multiple state policies</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Reduced cognitive load</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Plain language</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Multi-state policy</span>
+            </div>
           </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(-1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-eligibility" shape="rect" fit="cover" src="./macbook-pro---56-mrnc5y4y-xme0.png" placeholder="Drop Eligibility Screening image"></image-slot>
+          <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">The engine weighs hundreds of policy rules behind the scenes—but users never have to. I guided people one step at a time with plain language, progressive disclosure, and conversational flows.</p>
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 18px;">
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-eligibility" shape="rect" fit="cover" src="./macbook-pro---56-mrnc5y4y-xme0.png" placeholder="Drop main screen"></image-slot>
+            </div>
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-eligibility-2" shape="rect" fit="cover" placeholder="Drop a process shot"></image-slot>
+            </div>
           </div>
         </div>
 
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #FF49A4; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Personalized Results</div>
+        <!-- Personalized Results -->
+        <div style="margin-bottom: 84px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="width: 8px; height: 34px; background: #FF49A4; display: inline-block; border-radius: 4px;"></span>
+              <div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Personalized Results</div>
+                <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">People don't need more data—they need clarity.</div>
+              </div>
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">People don't need more data—they need clarity.</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">Rather than overwhelming users with program details, I designed a results experience that highlights estimated monthly benefit values and organizes recommendations into a clear, approachable summary. The goal was simple: help people understand the potential impact in seconds and feel motivated to take the next step.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #FF49A4;">◆</span>Estimated monthly benefit amount</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #FF49A4;">◆</span>Personalized benefit recommendations</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #FF49A4;">◆</span>Real-time eligibility logic processes results</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Est. monthly benefit</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Personalized picks</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Real-time logic</span>
+            </div>
           </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-results" shape="rect" fit="cover" src="./image-156-mrncdbsr-37uk.png" placeholder="Drop Personalized Results image"></image-slot>
+          <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">Instead of drowning people in program details, the results view leads with estimated monthly benefit value and a clear, approachable summary—so impact lands in seconds and the next step feels obvious.</p>
+          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 18px;">
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-results-2" shape="rect" fit="cover" placeholder="Drop a process shot"></image-slot>
+            </div>
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-results" shape="rect" fit="cover" src="./image-156-mrncdbsr-37uk.png" placeholder="Drop main screen"></image-slot>
+            </div>
           </div>
         </div>
 
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #E8FF00; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Support Plans</div>
+        <!-- Support Plans -->
+        <div style="margin-bottom: 84px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="width: 8px; height: 34px; background: #E8FF00; display: inline-block; border-radius: 4px;"></span>
+              <div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Support Plans</div>
+                <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">From "You're eligible" to "Here's exactly what to do."</div>
+              </div>
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">From "You're eligible" to "Here's exactly what to do."</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">One of my favorite features. I helped design Support Plans that turn eligibility results into personalized action steps written in clear, easy-to-read language. Instead of overwhelming users with government websites, we give them a practical checklist tailored to their situation.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #E8FF00;">◆</span>Personalized next steps</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #E8FF00;">◆</span>Available anytime after screening</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #E8FF00;">◆</span>Readability optimized for accessibility</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Personalized steps</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Always available</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Accessible reading</span>
+            </div>
           </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(-1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-support" shape="rect" fit="cover" src="./image-204-mrncee7l-uyzh.png" placeholder="Drop Support Plans image"></image-slot>
+          <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">One of my favorite features. Support Plans turn eligibility results into personalized action steps in clear, easy-to-read language—a practical checklist tailored to each person's situation, not a maze of government sites.</p>
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 18px;">
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-support" shape="rect" fit="cover" src="./image-204-mrncee7l-uyzh.png" placeholder="Drop main screen"></image-slot>
+            </div>
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-support-2" shape="rect" fit="cover" placeholder="Drop a process shot"></image-slot>
+            </div>
           </div>
         </div>
 
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #4BF33F; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Admin Dashboard</div>
+        <!-- Admin Dashboard -->
+        <div style="margin-bottom: 84px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="width: 8px; height: 34px; background: #4BF33F; display: inline-block; border-radius: 4px;"></span>
+              <div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Admin Dashboard</div>
+                <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">Less time searching—more time supporting.</div>
+              </div>
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">Helping staff spend less time searching—and more time supporting.</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">Case managers need quick answers, not more dashboards. I designed an admin experience that gives staff visibility into client progress, eligibility outcomes, and platform activity in one place. By surfacing the right information at the right time, the dashboard supports faster decision-making and more informed client conversations.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #4BF33F;">◆</span>Organization-wide reporting</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #4BF33F;">◆</span>Role-based dashboard experience</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #4BF33F;">◆</span>Client progress tracking</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Org-wide reporting</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Role-based views</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
+            </div>
           </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-admin" shape="rect" fit="cover" src="./customer_demo_overview_text_icon_sidebar-mrncfidp-6ica.png" placeholder="Drop Admin Dashboard image"></image-slot>
+          <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">Case managers need answers, not another dashboard. This view puts client progress, eligibility outcomes, and platform activity in one place—supporting faster decisions and more informed conversations.</p>
+          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 18px;">
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-admin-2" shape="rect" fit="cover" placeholder="Drop a process shot"></image-slot>
+            </div>
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-admin" shape="rect" fit="cover" src="./customer_demo_overview_text_icon_sidebar-mrncfidp-6ica.png" placeholder="Drop main screen"></image-slot>
+            </div>
           </div>
         </div>
 
-        <div style="display: flex; gap: 44px; align-items: center; margin-bottom: 76px; flex-wrap: wrap;">
-          <div style="flex: 1 1 320px; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-              <span style="width: 6px; height: 26px; background: #72E2EF; display: inline-block;"></span>
-              <div style="font-size: 21px; font-weight: 700;">Client Dashboard</div>
+        <!-- Client Dashboard -->
+        <div style="margin-bottom: 76px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="width: 8px; height: 34px; background: #72E2EF; display: inline-block; border-radius: 4px;"></span>
+              <div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Client Dashboard</div>
+                <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">One place to pick up right where you left off.</div>
+              </div>
             </div>
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #030504; margin: 0 0 12px;">Add a subheading</div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; margin: 0 0 16px;">Applying for benefits is rarely completed in one sitting. I designed a personalized dashboard that helps users return with confidence by keeping their results, Support Plan, and recommended resources in one place. Instead of asking people to remember what comes next, the dashboard keeps the journey organized from start to finish.</p>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Personalized home experience</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Saved Support Plans</div>
-            <div style="font-size: 13.5px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: #72E2EF;">◆</span>Progress tracking</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Personalized home</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Saved plans</span>
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
+            </div>
           </div>
-          <div style="flex: 1 1 320px; min-width: 280px; height: 260px; overflow: hidden; transform: rotate(-1deg); border-radius: 15px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-            <image-slot id="feat-client" shape="rect" fit="cover" src="./student-dashboard-home-mrncg043-99k7.png" placeholder="Drop Client Dashboard image"></image-slot>
+          <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">Applying for benefits rarely happens in one sitting. A personalized dashboard keeps results, Support Plans, and recommended resources together—so people can return with confidence and stay organized from start to finish.</p>
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 18px;">
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-client" shape="rect" fit="cover" src="./student-dashboard-home-mrncg043-99k7.png" placeholder="Drop main screen"></image-slot>
+            </div>
+            <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
+              <image-slot id="feat-client-2" shape="rect" fit="cover" placeholder="Drop a process shot"></image-slot>
+            </div>
           </div>
         </div>
       </div>
@@ -460,11 +512,11 @@
   <!-- ============================================================ -->
   <sc-if value="{{ isResume }}">
   <div data-screen-label="Resume" style="background-color: #FAFAF8B7">
-    <div style="position: relative; padding: 70px 48px 50px; box-sizing: border-box; overflow: hidden; background-color: #030504">
+    <div style="position: relative; padding: 50px 48px 50px; box-sizing: border-box; overflow: hidden; background-color: #030504">
       <span style="position: absolute; top: 30px; right: 70px; font-size: 24px; color: #FF49A4; animation: float-y 4.2s ease-in-out infinite; --r: -8deg;">+</span>
       <span style="position: absolute; bottom: 24px; right: 140px; font-size: 18px; color: #E8FF00; animation: twinkle 2.9s ease-in-out infinite; --r: 6deg;">✦</span>
       <div style="max-width: 1180px; margin: 0 auto;">
-        <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 14px;">BACKGROUND</div>
+        <div style="font-size: 15px; font-weight: 700; color: #72E2EF; margin-bottom: 14px; letter-spacing: 1px">BACKGROUND</div>
         <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52px; color: #fff; margin: 0 0 14px; transform: rotate(-1deg);">RÉSUMÉ</h1>
         <p style="font-size: 15.5px; color: rgba(255,255,255,0.72); margin: 0;">Product Designer with 6+ years leading UX strategy, research, and design for mission-driven digital products.<br></p>
       </div>
@@ -518,7 +570,7 @@
       </div>
 
       <div style="flex: 1 1 280px; min-width: 260px;">
-        <div style="background: #030504; padding: 26px; transform: rotate(1.5deg); margin-bottom: 30px; box-shadow: 4px 5px 0 rgba(3,5,4,0.15); border-radius: 15px;">
+        <div style="background: #030504; padding: 26px; transform: rotate(1.5deg); margin-bottom: 30px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); border-radius: 15px">
           <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #72E2EF; margin-bottom: 16px;">CONTACT</div>
           <div style="font-size: 14px; color: #fff; margin-bottom: 8px;">(470) 338-3949</div>
           <div style="font-size: 14px; color: #fff; margin-bottom: 8px;">avanti.pointer@gmail.com</div>
@@ -561,9 +613,9 @@
       <span style="position: absolute; top: 60px; right: 120px; font-size: 22px; color: #E8FF00; font-weight: 300; animation: float-y 5s ease-in-out infinite 0.4s; --r: 10deg;">✦</span>
       <span style="position: absolute; bottom: 30px; right: 60px; font-size: 20px; color: #4BF33F; font-weight: 300; animation: float-y 3.5s ease-in-out infinite 0.8s; --r: -12deg;">+</span>
       <div style="max-width: 720px; margin: 0 auto;">
-        <div style="font-size: 13px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 14px; transform: rotate(-1deg);">GOT AN IDEA? A PROJECT? A GOOD MEME?</div>
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #72E2EF; margin-bottom: 14px; transform: rotate(-1deg)">GOT AN IDEA? A GOOD MEME?</div>
         <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; color: #fff; margin: 0 0 14px; line-height: 1.02; transform: rotate(-0.5deg);">LET'S MAKE<br><span style="color: #E8FF00;">SOMETHING GOOD.</span></h1>
-        <p style="font-size: 16px; color: rgba(255,255,255,0.74); margin: 0; max-width: 470px;">Drop a note below and I'll get back to you faster than I can finish a cup of coffee. No cover letters required — just say hi!</p>
+        <p style="font-size: 16px; color: rgba(255,255,255,0.74); margin: 0; max-width: 470px;">Drop a note below &amp; I'll get back to you faster than I can finish a K-drama. No cover letters required — just say hi!</p>
       </div>
     </div>
 
@@ -729,10 +781,10 @@ class Component extends DCLogic {
     const connectorDots = [0, 1, 2, 3, 4, 5, 6];
 
     const personalFacts = [
-      { icon: '🎧', label: 'ON REPEAT', value: 'Upbeat playlists that make deadlines feel like a dance break', color: PINK, rotate: -1.5 },
-      { icon: '☕', label: 'FUELED BY', value: 'An unreasonable sweet cup of iced coffee', color: CYAN, rotate: 1.5 },
-      { icon: '✏️', label: 'HAPPIEST WHEN', value: 'A messy idea finally clicks and the whole team lights up', color: PINK, rotate: -1 },
-      { icon: '😄', label: 'MY WHOLE THING', value: 'Making work feel human — and getting people to smile along the way', color: CYAN, rotate: 1 },
+      { icon: '🎧', label: 'ON REPEAT', value: 'A good throwback playlist and the occasional podcast', color: PINK, rotate: -1.5 },
+      { icon: '☕', label: 'FUELED BY', value: 'An unreasonable sweet iced coffee', color: CYAN, rotate: 1.5 },
+      { icon: '✏️', label: 'HAPPIEST WHEN', value: 'A 1000 piece jigsaw puzzle is finally complete', color: PINK, rotate: -1 },
+      { icon: '😄', label: 'MY WHOLE THING', value: 'Enjoying what I do and helping folks along the way', color: CYAN, rotate: 1 },
     ];
 
     const toolNames = ['Figma', 'Claude AI', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Adobe After Effects', 'Dreamweaver', 'Google Suite', 'Microsoft Suite', 'Slack', 'Google Ads'];
