@@ -99,7 +99,6 @@
         <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #72E2EF; margin-bottom: 14px">ABOUT</div>
         <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; line-height: 1.05; margin: 0 0 24px; transform: rotate(-0.5deg);">DESIGN AS A<br>TOOL FOR GOOD<span style="color: #FF49A4;">.</span></h2>
         <p style="font-size: 15.5px; line-height: 1.75; color: #454141; margin: 0 0 18px;">Hello, hello! I'm a Product Designer with 6+ years leading UX strategy, research, and product design for mission-driven digital products — turning complex requirements into experiences people can actually navigate with confidence (and, ideally, a big smile).</p>
-        <p style="font-size: 15.5px; line-height: 1.75; color: #454141; margin: 0 0 30px;">I lead UX strategy, research, and design for mission-driven products — partnering with engineering and leadership to ship accessible, human-centered work.</p>
         <span onClick="{{ goResume }}" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 12px 22px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(1deg); transition: transform 0.2s; border-radius: 15px;" style-hover="transform: rotate(-1deg); background: #E8FF00;">SEE MY RESUME →</span>
       </div>
       <div style="flex: 1 1 420px; min-width: 320px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
@@ -130,13 +129,22 @@
       <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; margin: 0 0 12px; transform: rotate(-0.5deg);">A FEW THINGS<br>ABOUT ME</h2>
       <p style="font-size: 15.5px; line-height: 1.7; color: #454141; max-width: 560px; margin: 0 0 40px;">Because good design comes from real people — and I happen to be a pretty upbeat one. Here's what keeps me smiling between deadlines.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
-        <sc-for list="{{ personalFacts }}" as="f" hint-placeholder-count="4">
-          <div style="position: relative; background: #fff; padding: 26px 22px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate({{ f.rotate }}deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
-            
-            <div style="font-size: 13px; font-weight: 700; letter-spacing: 0px; color: {{ f.color }}; margin-bottom: 6px">{{ f.label }}</div>
-            <div style="font-size: 14.5px; font-weight: 600; line-height: 1.45;">{{ f.value }}</div>
-          </div>
-        </sc-for>
+     <div style="position: relative; background: #fff; padding: 26px 22px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate(-1.5deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 0px; color: #FF49A4; margin-bottom: 6px">ON REPEAT</div>
+          <div style="font-size: 14.5px; font-weight: 600; line-height: 1.45;">A good throwback playlist and the occasional podcast</div>
+        </div>
+        <div style="position: relative; background: #fff; padding: 26px 22px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate(1.5deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 0px; color: #72E2EF; margin-bottom: 6px">FUELED BY</div>
+          <div style="font-size: 14.5px; font-weight: 600; line-height: 1.45;">An unreasonable sweet iced coffee</div>
+        </div>
+        <div style="position: relative; background: #fff; padding: 26px 22px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate(-1deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 0px; color: #FF49A4; margin-bottom: 6px">HAPPIEST WHEN</div>
+          <div style="font-size: 14.5px; font-weight: 600; line-height: 1.45;">A 1000 piece jigsaw puzzle is finally complete</div>
+        </div>
+        <div style="position: relative; background: #fff; padding: 26px 22px; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); transform: rotate(1deg); transition: transform 0.2s; border-radius: 15px" style-hover="transform: rotate(0deg) translateY(-5px);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 0px; color: #72E2EF; margin-bottom: 6px">MY WHOLE THING</div>
+          <div style="font-size: 14.5px; font-weight: 600; line-height: 1.45;">Enjoying what I do and helping folks along the way</div>
+        </div>
       </div>
     </div>
 
