@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Avanti Pointer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<style>
+  @keyframes float-y { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-14px) rotate(var(--r,0deg)); } }
+  @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  body { margin: 0; -webkit-font-smoothing: antialiased; }
+  a { color: #72E2EF; }
+  a:hover { color: #FF49A4; }
+  ::selection { background: #E8FF00; color: #030504; }
+
+  .logo-link { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .logo-img-wrap { position: relative; height: 40px; transform: rotate(-6deg); transition: transform 0.25s; }
+  .logo-link:hover .logo-img-wrap { transform: rotate(6deg) scale(1.08); }
+
+  .say-hi { transition: transform 0.2s; }
+  .say-hi:hover { transform: rotate(2deg) scale(1.05); }
+
+  .reason-chip { transition: transform 0.15s; }
+  .reason-chip:hover { transform: rotate(0deg) translateY(-2px); }
+
+  .send-btn { transition: transform 0.2s, box-shadow 0.2s; }
+  .send-btn:hover { transform: rotate(1deg) translateY(-3px); box-shadow: 4px 6px 0 #FF49A4; }
+
+  .send-another { transition: transform 0.2s; }
+  .send-another:hover { transform: rotate(-1deg); background: #72E2EF; }
+
+  input, textarea { font-family: inherit; }
+</style>
+</head>
+<body>
+
+<div style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FAFAF8; color: #030504; min-height: 100vh;">
+
+  <!-- ============ NAV ============ -->
+  <div style="position: sticky; top: 0; z-index: 100; background: #030504; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; box-sizing: border-box;">
+    <a href="index.html" class="logo-link">
+      <div class="logo-img-wrap">
+        <img src="./avanti-logo.png" alt="Avanti" style="height: 40px; width: auto; display: block;">
+      </div>
+      <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 1px; color: #fff;">AVANTI POINTER</span>
+    </a>
+    <div style="display: flex; gap: 36px; align-items: center;">
+      <a href="index.html" style="text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: #fff; transition: color 0.2s">HOME</a>
+      <a href="portfolio.html" style="text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: #fff; transition: color 0.2s">PORTFOLIO</a>
+      <a href="resume.html" style="text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: #fff; transition: color 0.2s">RESUME</a>
+      <a href="contact.html" class="say-hi" style="text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); border-radius: 15px;">SAY HI →</a>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT PAGE ============ -->
+  <div>
+    <div style="position: relative; background: #030504; padding: 90px 48px 70px; box-sizing: border-box; overflow: hidden;">
+      <span style="position: absolute; top: 40px; left: 90px; font-size: 28px; color: #FF49A4; font-weight: 300; animation: float-y 4s ease-in-out infinite; --r: -8deg;">+</span>
+      <span style="position: absolute; top: 60px; right: 120px; font-size: 22px; color: #E8FF00; font-weight: 300; animation: float-y 5s ease-in-out infinite 0.4s; --r: 10deg;">✦</span>
+      <span style="position: absolute; bottom: 30px; right: 60px; font-size: 20px; color: #4BF33F; font-weight: 300; animation: float-y 3.5s ease-in-out infinite 0.8s; --r: -12deg;">+</span>
+      <div style="max-width: 720px; margin: 0 auto;">
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #72E2EF; margin-bottom: 14px; transform: rotate(-1deg)">GOT AN IDEA? A GOOD MEME?</div>
+        <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; color: #fff; margin: 0 0 14px; line-height: 1.02; transform: rotate(-0.5deg);">LET'S MAKE<br><span style="color: #E8FF00;">SOMETHING GOOD.</span></h1>
+        <p style="font-size: 16px; color: rgba(255,255,255,0.74); margin: 0; max-width: 470px;">Drop a note below &amp; I'll get back to you faster than I can finish a K-drama. No cover letters required — just say hi!</p>
+      </div>
+    </div>
+
+    <div style="max-width: 720px; margin: 0 auto; padding: 70px 48px 110px; box-sizing: border-box;">
+
+      <!-- Success panel (hidden until form submits) -->
+      <div id="contact-success" style="display: none; background: #fff; padding: 48px 40px; text-align: center; box-shadow: 5px 6px 0 rgba(3,5,4,0.1); transform: rotate(-0.6deg); border-radius: 15px;">
+        <div style="font-size: 46px; margin-bottom: 14px;">🎉</div>
+        <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; margin: 0 0 10px;">MESSAGE SENT!</h2>
+        <p style="font-size: 15px; color: #454141; margin: 0 0 24px;">Thanks, <span id="success-name"></span>! I'll reply to <span id="success-email"></span> soon — probably with too many exclamation points and at least one smiley.</p>
+        <span id="send-another-btn" class="send-another" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 12px 22px; border: 1.5px solid #030504; cursor: pointer; transform: rotate(1deg); border-radius: 15px;">SEND ANOTHER →</span>
+      </div>
+
+      <!-- Form -->
+      <form id="contact-form" style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1 1 220px; transform: rotate(-0.4deg);">
+            <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">YOUR NAME</label>
+            <input id="contact-name" required placeholder="Jamie Doodle" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; outline: none; border-radius: 15px;">
+          </div>
+          <div style="flex: 1 1 220px; transform: rotate(0.4deg);">
+            <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">YOUR EMAIL</label>
+            <input id="contact-email" required type="email" placeholder="jamie@doodle.com" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; outline: none; border-radius: 15px;">
+          </div>
+        </div>
+
+        <div style="transform: rotate(-0.3deg);">
+          <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">WHAT'S THIS ABOUT?</label>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span class="reason-chip" data-reason="A PROJECT" data-color="#72E2EF" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 16px; border: 1.5px solid #030504; cursor: pointer; background: #fff; color: #030504; border-radius: 15px; transform: rotate(-1deg);">A PROJECT</span>
+            <span class="reason-chip" data-reason="FULL-TIME ROLE" data-color="#FF49A4" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 16px; border: 1.5px solid #030504; cursor: pointer; background: #fff; color: #030504; border-radius: 15px; transform: rotate(1deg);">FULL-TIME ROLE</span>
+            <span class="reason-chip" data-reason="JUST SAYING HI" data-color="#E8FF00" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 16px; border: 1.5px solid #030504; cursor: pointer; background: #fff; color: #030504; border-radius: 15px; transform: rotate(-1deg);">JUST SAYING HI</span>
+            <span class="reason-chip" data-reason="SOMETHING ELSE" data-color="#4BF33F" style="font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 16px; border: 1.5px solid #030504; cursor: pointer; background: #fff; color: #030504; border-radius: 15px; transform: rotate(1deg);">SOMETHING ELSE</span>
+          </div>
+        </div>
+
+        <div style="transform: rotate(0.3deg);">
+          <label style="display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">THE DETAILS</label>
+          <textarea id="contact-message" required placeholder="Tell me about your project, your timeline, or just say hi..." rows="6" style="width: 100%; box-sizing: border-box; padding: 14px 16px; font-size: 14.5px; border: 2px solid #030504; background: #fff; outline: none; border-radius: 15px; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="send-btn" style="align-self: flex-start; background: #72E2EF; border: none; padding: 16px 40px; border-radius: 15px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.4px; color: #030504; cursor: pointer; transform: rotate(-1deg);">SEND IT →</button>
+      </form>
+
+      <div style="margin-top: 60px; padding-top: 40px; border-top: 2px dashed #ddd8d3; display: flex; gap: 40px; flex-wrap: wrap;">
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #9a9591; margin-bottom: 6px;">OR JUST EMAIL ME</div>
+          <a href="mailto:avanti.pointer@gmail.com" style="font-size: 15px; font-weight: 700; color: #030504;">avanti.pointer@gmail.com</a>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #9a9591; margin-bottom: 6px;">OR CALL / TEXT</div>
+          <div style="font-size: 15px; font-weight: 700;">(470) 338-3949</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div style="position: relative; background: #030504; padding: 56px 48px 34px; box-sizing: border-box; overflow: hidden;">
+    <span style="position: absolute; bottom: 30px; left: 48px; font-size: 20px; color: #72E2EF; animation: spin-slow 10s linear infinite;">+</span>
+    <span style="position: absolute; bottom: 30px; left: 72px; font-size: 20px; color: #FF49A4; animation: spin-slow 8s linear infinite reverse;">+</span>
+    <span style="position: absolute; bottom: 30px; left: 96px; font-size: 20px; color: #E8FF00; animation: spin-slow 12s linear infinite;">+</span>
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
+      <div>
+        <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #72E2EF; transform: rotate(-1deg); margin-bottom: 8px;">AVANTI DESIGNS</div>
+        <div style="font-size: 13.5px; color: rgba(255,255,255,0.6);">Impactful. Dependable. Expressive. Smiley. :)</div>
+      </div>
+      <div style="display: flex; gap: 30px;">
+        <a href="index.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">HOME</a>
+        <a href="portfolio.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">PORTFOLIO</a>
+        <a href="resume.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">RESUME</a>
+        <a href="contact.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">CONTACT</a>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12.5px; color: rgba(255,255,255,0.5);">(470) 338-3949 · avanti.pointer@gmail.com · avantipdesigns.com</div>
+  </div>
+
+</div>
+
+<script>
+  var selectedReason = '';
+
+  document.querySelectorAll('.reason-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var reason = chip.dataset.reason;
+      selectedReason = (selectedReason === reason) ? '' : reason;
+      document.querySelectorAll('.reason-chip').forEach(function (c) {
+        c.style.background = (c.dataset.reason === selectedReason) ? c.dataset.color : '#fff';
+      });
+    });
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('contact-name').value;
+    var email = document.getElementById('contact-email').value;
+    var message = document.getElementById('contact-message').value;
+
+    var subject = 'Portfolio inquiry' + (selectedReason ? ' — ' + selectedReason : '') + ' from ' + name;
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\n' + (selectedReason ? 'About: ' + selectedReason + '\n' : '') + '\nMessage:\n' + message;
+    window.location.href = 'mailto:avanti.pointer@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    document.getElementById('success-name').textContent = name;
+    document.getElementById('success-email').textContent = email;
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+  });
+
+  document.getElementById('send-another-btn').addEventListener('click', function () {
+    document.getElementById('contact-form').reset();
+    selectedReason = '';
+    document.querySelectorAll('.reason-chip').forEach(function (c) { c.style.background = '#fff'; });
+    document.getElementById('contact-success').style.display = 'none';
+    document.getElementById('contact-form').style.display = 'flex';
+  });
+</script>
+
+</body>
+</html>
