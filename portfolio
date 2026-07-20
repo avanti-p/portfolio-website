@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&amp;family=Montserrat:wght@900&amp;display=swap" rel="stylesheet">
+  <style>
+    @keyframes float-y { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-14px) rotate(var(--r,0deg)); } }
+    @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes wiggle { 0%,100% { transform: rotate(var(--r,0deg)); } 25% { transform: rotate(calc(var(--r,0deg) - 5deg)); } 75% { transform: rotate(calc(var(--r,0deg) + 5deg)); } }
+    @keyframes twinkle { 0%,100% { opacity: 1; transform: scale(1) rotate(var(--r,0deg)); } 50% { opacity: 0.35; transform: scale(0.7) rotate(var(--r,0deg)); } }
+    @keyframes bob-bubble { 0%,100% { transform: translateY(0) rotate(var(--r,-4deg)); } 50% { transform: translateY(-6px) rotate(var(--r,-4deg)); } }
+    body { margin: 0; -webkit-font-smoothing: antialiased; }
+    a { color: #72E2EF; }
+    a:hover { color: #FF49A4; }
+    ::selection { background: #E8FF00; color: #030504; }
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: {{ pageBg }}; color: #030504; min-height: 100vh;">
+
+  <!-- ============ NAV ============ -->
+  <div style="position: sticky; top: 0; z-index: 100; background: #030504; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 14px; cursor: pointer;" onClick="{{ goHome }}">
+      <div style="position: relative; height: 40px; transform: rotate(-6deg); transition: transform 0.25s;" style-hover="transform: rotate(6deg) scale(1.08);">
+        <img src="./avanti-logo.png" alt="Avanti" style="height: 40px; width: auto; display: block;">
+      </div>
+      <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 1px; color: #fff;">AVANTI POINTER</span>
+    </div>
+    <div style="display: flex; gap: 36px; align-items: center;">
+      <span onClick="{{ goHome }}" style="font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: {{ homeNavColor }}; transition: color 0.2s">HOME</span>
+      <span onClick="{{ goPortfolio }}" style="font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: {{ portfolioNavColor }}; transition: color 0.2s">PORTFOLIO</span>
+      <span onClick="{{ goResume }}" style="font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: {{ resumeNavColor }}; transition: color 0.2s">RESUME</span>
+      <span onClick="{{ goContact }}" style="font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); border-radius: 15px; transition: transform 0.2s" style-hover="transform: rotate(2deg) scale(1.05);">SAY HI →</span>
+    </div>
+  </div>
+
+
+
+  <!-- ============================================================ -->
+  <!-- ============ PORTFOLIO PAGE ============ -->
+  <!-- ============================================================ -->
+  <sc-if value="{{ isPortfolio }}">
+  <div data-screen-label="Portfolio">
+    <div style="position: relative; background: #030504; padding: 50px 48px 44px; box-sizing: border-box; overflow: hidden">
+      <span style="position: absolute; top: 30px; right: 60px; font-size: 24px; color: #FF49A4; animation: float-y 4.5s ease-in-out infinite; --r: 10deg;">+</span>
+      <span style="position: absolute; bottom: 24px; right: 130px; font-size: 18px; color: #E8FF00; animation: twinkle 2.7s ease-in-out infinite; --r: -8deg;">✦</span>
+      <div style="max-width: 1180px; margin: 0 auto;">
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #72E2EF; margin-bottom: 14px">WORK</div>
+        <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; color: #fff; margin: 0 0 12px; transform: rotate(-1deg);">PORTFOLIO</h1>
+        <p style="font-size: 15.5px; color: rgba(255,255,255,0.72); margin: 0; max-width: 500px;">Selected work — made with a lot of care and a lot of research. Grab a coffee and take a look around!</p>
+      </div>
+    </div>
+
+    <div style="max-width: 1180px; margin: 0 auto; padding: 36px 48px 0; display: flex; gap: 12px; flex-wrap: wrap; box-sizing: border-box;">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+        <span onClick="{{ f.onClick }}" style="font-size: 12.5px; font-weight: 700; letter-spacing: 1px; padding: 10px 18px; cursor: pointer; background: {{ f.bg }}; color: {{ f.fg }}; border: 1.5px solid {{ f.border }}; border-radius: 15px; transform: rotate({{ f.rotate }}deg); transition: transform 0.15s;" style-hover="transform: rotate(0deg) translateY(-2px);">{{ f.label }}</span>
+      </sc-for>
+    </div>
+
+    <div style="max-width: 1180px; margin: 0 auto; padding: 40px 5px 110px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, 1fr); gap: 44px">
+      <sc-for list="{{ filteredWork }}" as="item" hint-placeholder-count="6">
+        <div onClick="{{ item.onClick }}" style="background: #fff; transform: rotate({{ item.rotate }}deg); transition: transform 0.25s, box-shadow 0.25s; cursor: {{ item.cursor }}; box-shadow: 0 0 8px 3px rgba(3,5,4,0.1); border-radius: 15px; overflow: hidden" style-hover="transform: rotate(0deg) translateY(-8px); box-shadow: 9px 11px 0 rgba(3,5,4,0.18);">
+          <div style="position: relative; height: 320px; overflow: hidden">
+            <img src="{{ item.img }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+          <div style="padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; gap: 10px;">
+              <div style="font-size: 17px; font-weight: 700;">{{ item.title }}</div>
+              <div style="font-size: 12.5px; color: #9a9591; white-space: nowrap;">{{ item.year }}</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ item.tags }}" as="tag" hint-placeholder-count="3">
+                <span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.5px; padding: 5px 10px; background: {{ panelBg }}; border-radius: 15px; color: #58534f;">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============ FOOTER ============ -->
+  <div style="position: relative; background: #030504; padding: 56px 48px 34px; box-sizing: border-box; overflow: hidden;">
+    <span style="position: absolute; bottom: 30px; left: 48px; font-size: 20px; color: #72E2EF; animation: spin-slow 10s linear infinite;">+</span>
+    <span style="position: absolute; bottom: 30px; left: 72px; font-size: 20px; color: #FF49A4; animation: spin-slow 8s linear infinite reverse;">+</span>
+    <span style="position: absolute; bottom: 30px; left: 96px; font-size: 20px; color: #E8FF00; animation: spin-slow 12s linear infinite;">+</span>
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
+      <div>
+        <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #72E2EF; transform: rotate(-1deg); margin-bottom: 8px;">AVANTI DESIGNS</div>
+        <div style="font-size: 13.5px; color: rgba(255,255,255,0.6);">Impactful. Dependable. Expressive. Smiley. :)</div>
+      </div>
+      <div style="display: flex; gap: 30px;">
+        <span onClick="{{ goHome }}" style="font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">HOME</span>
+        <span onClick="{{ goPortfolio }}" style="font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">PORTFOLIO</span>
+        <span onClick="{{ goResume }}" style="font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">RESUME</span>
+        <span onClick="{{ goContact }}" style="font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">CONTACT</span>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12.5px; color: rgba(255,255,255,0.5);">(470) 338-3949 · avanti.pointer@gmail.com · avantipdesigns.com</div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;pageBg&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#FAFAF8&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#FFFFFF&quot;, &quot;#FAFAF8&quot;, &quot;#F4F1EA&quot;, &quot;#F0F7F8&quot;, &quot;#FDF0F5&quot;], &quot;section&quot;: &quot;Background&quot;}, &quot;panelBg&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#F0EFEC&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#FFFFFF&quot;, &quot;#F0EFEC&quot;, &quot;#EAE6DC&quot;, &quot;#E4F4F7&quot;, &quot;#FBE6EF&quot;], &quot;section&quot;: &quot;Background&quot;}}">
+const CYAN = '#72E2EF', PINK = '#FF49A4', YELLOW = '#E8FF00', GREEN = '#4BF33F';
+
+class Component extends DCLogic {
+  state = { page: 'home', filter: 'ALL', contactForm: { name: '', email: '', message: '' }, contactReason: '', contactSubmitted: false };
+
+  goHome = () => { this.setState({ page: 'home' }); window.scrollTo(0, 0); };
+  goPortfolio = () => { this.setState({ page: 'portfolio' }); window.scrollTo(0, 0); };
+  goCase = () => { this.setState({ page: 'case' }); window.scrollTo(0, 0); };
+  goResume = () => { this.setState({ page: 'resume' }); window.scrollTo(0, 0); };
+  goContact = () => { this.setState({ page: 'contact' }); window.scrollTo(0, 0); };
+  setFilter = (f) => () => this.setState({ filter: f });
+
+  setContactField = (field) => (e) => {
+    const value = e.target.value;
+    this.setState((s) => ({ contactForm: { ...s.contactForm, [field]: value } }));
+  };
+  setContactReason = (reason) => () => this.setState({ contactReason: reason });
+  submitContact = (e) => {
+    e.preventDefault();
+    const { name, email, message } = this.state.contactForm;
+    const reason = this.state.contactReason;
+    const subject = `Portfolio inquiry${reason ? ' — ' + reason : ''} from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n${reason ? 'About: ' + reason + '\n' : ''}\nMessage:\n${message}`;
+    window.location.href = `mailto:avanti.pointer@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    this.setState({ contactSubmitted: true });
+  };
+  resetContact = () => {
+    this.setState({ contactSubmitted: false, contactForm: { name: '', email: '', message: '' }, contactReason: '' });
+  };
+  scrollToId = (id) => () => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  };
+
+  renderVals() {
+    const page = this.state.page;
+
+    const portfolioWorkRaw = [
+      { id: 'benefits-nav', tag: 'PRODUCT DESIGN', color: CYAN, title: 'Benefits Navigation Platform', year: '2024', tags: ['PRODUCT DESIGN', 'WEB APPLICATION', 'UI DESIGN'], img: 'assets/benefit-nav-hero.png', rotate: -1, hasCase: true },
+      { id: 'bestfit', tag: 'WEB DESIGN', color: PINK, title: 'BestFit, Inc. Web Redesign', year: '2021–2023', tags: ['WEB DESIGN', 'UX DESIGN', 'PRODUCT STRATEGY'], img: 'assets/bestfit-web2.jpg', rotate: -2 },
+      { id: 'ai', tag: 'STRATEGY & RESEARCH', color: GREEN, title: 'AI Initiative (Gitlab)', year: '2025', tags: ['STRATEGY & RESEARCH', 'AI/ML DESIGN', 'ENTERPRISE UX'], img: 'assets/ai-initiative2.jpg', rotate: 2 },
+      { id: 'cliff', tag: 'PRODUCT DESIGN', color: YELLOW, title: 'Benefit Cliff Tool', year: '2026', tags: ['PRODUCT DESIGN', 'SOCIAL IMPACT', 'STRATEGY & RESEARCH'], img: 'assets/benefit-cliff-tool.jpg', rotate: -1 },
+      { id: 'ohio', tag: 'PRODUCT STRATEGY', color: CYAN, title: 'Ohio Benefits Expansion', year: '2026', tags: ['PRODUCT STRATEGY', 'DIGITAL STRATEGY', 'ANALYTICS'], img: 'assets/ohio-benefits.jpg', rotate: 2 },
+      { id: 'illustration', tag: 'ILLUSTRATION', color: PINK, title: 'Illustration Library', year: '2020', tags: ['ILLUSTRATION', 'PACKAGING', 'PRINT DESIGN'], img: 'assets/illustration-library.jpg', rotate: -2 },
+    ];
+    const portfolioWork = portfolioWorkRaw.map(it => ({
+      ...it,
+      cursor: it.hasCase ? 'pointer' : 'default',
+      onClick: it.hasCase ? this.goCase : () => {},
+    }));
+
+    const filter = this.state.filter;
+    const filteredWork = filter === 'ALL' ? portfolioWork : portfolioWork.filter(w => w.tags.includes(filter));
+
+    const filterDefs = ['ALL', 'PRODUCT DESIGN', 'WEB DESIGN', 'STRATEGY & RESEARCH', 'ILLUSTRATION'];
+    const filters = filterDefs.map((label, i) => {
+      const active = filter === label;
+      const colors = [CYAN, PINK, YELLOW, GREEN, CYAN];
+      return {
+        label, onClick: this.setFilter(label), rotate: (i % 2 === 0 ? -1 : 1),
+        bg: active ? colors[i] : '#fff', fg: active ? '#030504' : '#58534f', border: active ? colors[i] : '#ddd8d3',
+      };
+    });
+
+    const featuredWork = [
+      { tag: 'PRODUCT DESIGN', color: CYAN, title: 'Benefit Navigation Platform', desc: 'Designing a platform that helps individuals identify, understand, and access public benefits — with way less headache.', img: 'assets/benefit-nav-meeting.jpg', rotate: -2, cursor: 'pointer', onClick: this.goCase },
+      { tag: 'WEB DESIGN', color: PINK, title: 'BestFit, Inc. Web Redesign', desc: 'Led a 7-member design team in rebranding Bella and Bailey, a Black-owned Atlanta dog accessories company.', img: 'assets/bestfit-web.jpg', rotate: 1, cursor: 'default', onClick: () => {} },
+      { tag: 'STRATEGY & RESEARCH', color: YELLOW, title: 'AI Initiative (Gitlab)', desc: 'A series addressing the historical context of racial inequalities in America through expressive design.', img: 'assets/ai-initiative.jpg', rotate: -1, cursor: 'default', onClick: () => {} },
+    ];
+
+    const aboutSkills = [
+      { name: 'Product Design', color: CYAN, rotate: -1 },
+      { name: 'Strategy & Research', color: GREEN, rotate: 1 },
+      { name: 'Leadership & Implementation', color: PINK, rotate: -1 },
+      { name: 'Brand Identity', color: PINK, rotate: 1 },
+      { name: 'Collateral Design', color: YELLOW, rotate: -1 },
+      { name: 'Web Design', color: CYAN, rotate: 1 },
+    ];
+
+    const connectorDots = [0, 1, 2, 3, 4, 5, 6];
+
+    const personalFacts = [
+      { icon: '🎧', label: 'ON REPEAT', value: 'A good throwback playlist and the occasional podcast', color: PINK, rotate: -1.5 },
+      { icon: '☕', label: 'FUELED BY', value: 'An unreasonable sweet iced coffee', color: CYAN, rotate: 1.5 },
+      { icon: '✏️', label: 'HAPPIEST WHEN', value: 'A 1000 piece jigsaw puzzle is finally complete', color: PINK, rotate: -1 },
+      { icon: '😄', label: 'MY WHOLE THING', value: 'Enjoying what I do and helping folks along the way', color: CYAN, rotate: 1 },
+    ];
+
+    const toolNames = ['Figma', 'Claude AI', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Adobe After Effects', 'Dreamweaver', 'Google Suite', 'Microsoft Suite', 'Slack', 'Google Ads'];
+    const toolColors = [CYAN, PINK, YELLOW, GREEN];
+    const toolChips = toolNames.map((name, i) => ({ name, rotate: (i % 2 === 0 ? -1.5 : 1.5), color: toolColors[i % 4] }));
+    const programChips = toolNames.map((name, i) => ({ name, rotate: (i % 2 === 0 ? -1 : 1) }));
+
+    const challengeStats = [
+      { num: '60%+', label: "of eligible individuals don't access benefits they qualify for", color: PINK, rotate: -1 },
+      { num: '30+', label: 'benefit programs across federal, state, and local levels', color: YELLOW, rotate: 1 },
+      { num: '1 in 3', label: 'users abandon benefit applications due to complexity', color: CYAN, rotate: -1 },
+    ];
+
+    const roleCards = [
+      { title: 'Product Strategy', color: CYAN, rotate: -1, items: ['Defined MVP scope', 'Prioritized roadmap features', 'Wrote product requirements'] },
+      { title: 'Research', color: PINK, rotate: 1, items: ['User interviews', 'Usability testing', 'Policy & eligibility research'] },
+      { title: 'Design & Prototyping', color: YELLOW, rotate: -1, items: ['Wireframes & interactive prototypes', 'End-to-end user flows', 'Developer handoff'] },
+      { title: 'Cross-functional Leadership', color: GREEN, rotate: 1, items: ['Engineering collaboration', 'Stakeholder alignment', 'Client onboarding'] },
+    ];
+
+    const featuredComponents = [
+      { title: 'Eligibility Screening Tool', color: CYAN, rotate: -1, sub: 'Making complicated questions feel simple.', img: 'assets/case-eligibility-tool.jpg', desc: 'The eligibility engine evaluates hundreds of policy rules behind the scenes—but users shouldn\'t have to think about any of that.\n\nI redesigned the screening experience to guide people one step at a time using plain language, progressive disclosure, and conversational flows.', bullets: ['Reduced cognitive load', 'Plain-language questions', 'Built for multiple state policies'] },
+      { title: 'Personalized Results', color: PINK, rotate: 1, sub: 'People don\'t need more data—they need clarity.', img: 'assets/case-results.jpg', desc: 'Rather than overwhelming users with program details, I designed a results experience that highlights estimated monthly benefit values and organizes recommendations into a clear, approachable summary. The goal was simple: help people understand the potential impact in seconds and feel motivated to take the next step.', bullets: ['Estimated monthly benefit amount', 'Personalized benefit recommendations', 'Real-time eligibility logic processes results'] },
+      { title: 'Support Plans', color: YELLOW, rotate: -1, sub: 'From "You\'re eligible" to "Here\'s exactly what to do."', img: 'assets/case-support-plans.jpg', desc: 'One of my favorite features.\n\nI helped design Support Plans that turn eligibility results into personalized action steps written in clear, easy-to-read language.\n\nInstead of overwhelming users with government websites, we give them a practical checklist tailored to their situation.', bullets: ['Personalized next steps', 'Available anytime after screening', 'Readability optimized for accessibility'] },
+      { title: 'Admin Dashboard', color: GREEN, rotate: 1, sub: 'Helping staff spend less time searching—and more time supporting.', img: 'assets/case-admin-dashboard.jpg', desc: 'Case managers need quick answers, not more dashboards.\n\nI designed an admin experience that gives staff visibility into client progress, eligibility outcomes, and platform activity in one place. By surfacing the right information at the right time, the dashboard supports faster decision-making and more informed client conversations', bullets: ['Organization-wide reporting', 'Role-based dashboard experience', 'Client progress tracking'] },
+      { title: 'Client Dashboard', color: CYAN, rotate: -1, sub: 'Add a subheading', img: 'assets/case-client-dashboard.jpg', desc: 'Applying for benefits is rarely completed in one sitting. I designed a personalized dashboard that helps users return with confidence by keeping their results, Support Plan, and recommended resources in one place.\n\n\n\n\nInstead of asking people to remember what comes next, the dashboard keeps the journey organized from start to finish.', bullets: ['Personalized home experience', 'Saved Support Plans', 'Progress tracking'] },
+    ];
+
+    const outcomeStats = [
+      { num: '5+', label: 'public benefit programs integrated into the screener', color: CYAN, rotate: -1 },
+      { num: '81%', label: 'of users successfully identified at least one new benefit they qualified for', color: PINK, rotate: 1 },
+      { num: '$401', label: 'average monthly benefits identified ', color: YELLOW, rotate: -1 },
+      { num: '161', label: 'hours in staff time saved completing eligibility interviews', color: GREEN, rotate: 1 },
+    ];
+
+    const outcomeCards = [
+      { title: 'Better Access', color: CYAN, text: 'More users successfully identified benefits they qualified for.' },
+      { title: 'Better Decisions', color: PINK, text: 'Case managers spent less time interpreting eligibility rules and more time supporting people.' },
+      { title: 'Better Experience', color: YELLOW, text: 'Complex government programs became approachable through plain language and thoughtful interaction design.' },
+      { title: 'Better Partnerships', color: GREEN, text: 'The platform expanded to support universities, nonprofits, and workforce organizations across multiple states.' },
+    ];
+
+    const experience = [
+      { color: PINK, company: 'BestFit, Inc.', role: 'Product Designer', place: 'Atlanta, GA — B2B public benefits platform for higher education, workforce, and nonprofit organizations', dates: 'NOV 2022 – JULY 2026', bullets: ['Led end-to-end product design for the platform, translating complex federal and state policy into an intuitive eligibility screening experience.', 'Conducted user research, usability testing, and stakeholder interviews to validate solutions and inform product strategy.', 'Designed AI-powered Support Plans and Benefit Navigation experiences that simplified access to public benefits.', 'Defined product requirements with engineering and leadership to prioritize roadmap initiatives, scope MVPs, and deliver new features.', 'Created interactive prototypes, user flows, and developer-ready specs; supported enterprise rollouts including Clayton State University.'] },
+      { color: YELLOW, company: 'BestFit, Inc.', role: 'Graphic Designer & Marketing Coordinator', place: 'Atlanta, GA', dates: 'APRIL 2020 – NOVEMBER 2022', bullets: ['Coordinated client communications and outreach materials.', 'Organized project files and maintained digital records.', 'Created accessible materials for workforce, nonprofit, and higher education organizations.', 'Collaborated with internal teams to meet project deadlines.'] },
+    ];
+
+    const contactReasonLabels = ['A PROJECT', 'FULL-TIME ROLE', 'JUST SAYING HI', 'SOMETHING ELSE'];
+    const reasonColors = [CYAN, PINK, YELLOW, GREEN];
+    const contactReasons = contactReasonLabels.map((label, i) => ({
+      label,
+      rotate: i % 2 === 0 ? -1 : 1,
+      bg: this.state.contactReason === label ? reasonColors[i % 4] : '#fff',
+      onClick: this.setContactReason(label),
+    }));
+
+    const pageNav = [
+      { num: '01', label: 'The Challenge', color: PINK, onClick: this.scrollToId('case-challenge') },
+      { num: '02', label: 'My Role', color: YELLOW, onClick: this.scrollToId('case-role') },
+      { num: '03', label: 'Featured Components', color: CYAN, onClick: this.scrollToId('case-components') },
+      { num: '04', label: 'The Outcomes', color: GREEN, onClick: this.scrollToId('case-outcomes') },
+    ];
+
+    const resumeSkills = [
+      { name: 'UX Design', pct: 95, color: CYAN },
+      { name: 'User Research', pct: 90, color: PINK },
+      { name: 'Information Architecture', pct: 88, color: YELLOW },
+      { name: 'Interaction Design', pct: 92, color: GREEN },
+      { name: 'Design Systems', pct: 85, color: CYAN },
+      { name: 'Product Strategy', pct: 82, color: PINK },
+    ];
+
+    const pageBg = this.props.pageBg ?? '#FAFAF8';
+    const panelBg = this.props.panelBg ?? '#F0EFEC';
+
+    return {
+      pageBg, panelBg,
+      page, isHome: page === 'home', isPortfolio: page === 'portfolio', isCase: page === 'case', isResume: page === 'resume', isContact: page === 'contact',
+      goHome: this.goHome, goPortfolio: this.goPortfolio, goCase: this.goCase, goResume: this.goResume, goContact: this.goContact,
+      homeNavColor: page === 'home' ? CYAN : '#fff',
+      portfolioNavColor: (page === 'portfolio' || page === 'case') ? CYAN : '#fff',
+      resumeNavColor: page === 'resume' ? CYAN : '#fff',
+      featuredWork, aboutSkills, connectorDots, personalFacts, toolChips, programChips,
+      filters, filteredWork,
+      challengeStats, roleCards, featuredComponents, outcomeStats, outcomeCards, pageNav,
+      experience, resumeSkills,
+      contactForm: this.state.contactForm,
+      contactSubmitted: this.state.contactSubmitted,
+      contactNotSubmitted: !this.state.contactSubmitted,
+      setContactName: this.setContactField('name'),
+      setContactEmail: this.setContactField('email'),
+      setContactMessage: this.setContactField('message'),
+      submitContact: this.submitContact,
+      resetContact: this.resetContact,
+      contactReasons,
+    };
+  }
+}
+</script>
+</body>
+</html>
