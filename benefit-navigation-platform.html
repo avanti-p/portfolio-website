@@ -35,11 +35,11 @@
 
   .placeholder-shot { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 13px; text-align: center; padding: 12px; box-sizing: border-box; }
   .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease; overflow: hidden; height: 280px; }
-  .detail-shot-a { transform: translateY(0px) rotate(-2deg); }
-  .detail-shot-b { transform: translateY(22px) rotate(2deg); }
+  .detail-shot-a { transform: translateY(0px) rotate(-1deg); }
+  .detail-shot-b { transform: translateY(22px) rotate(1deg); }
   .detail-shot:hover { box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
-  .detail-shot-a:hover { transform: translateY(0px) scale(1.5); }
-  .detail-shot-b:hover { transform: translateY(22px) scale(1.5); }
+  .detail-shot-a:hover { transform: translateY(0px) scale(1.1); }
+  .detail-shot-b:hover { transform: translateY(22px) scale(1.1); }
   .detail-shot-placeholder { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 11px; text-align: center; padding: 8px; box-sizing: border-box; }
 </style>
 </head>
@@ -202,7 +202,7 @@
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Multi-state policy</span>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
       <div style="border-left: 4px solid #72E2EF; padding-left: 18px;">
         <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Existing screening tools are long, confusing, and filled with government terminology. Organizations also spend significant staff time manually determining eligibility, leading to inconsistent results and slower client support.</div>
@@ -212,7 +212,7 @@
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A guided eligibility experience that translates >95 pages of government forms, across multiple benefits, into a simple and quick screener. People see one plain-language question at a time, revealed progressively so nothing feels overwhelming, reducing the burden for multiple on both clients and case managers.</div>
       </div>
     </div>
-    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
       <img src="./assets/bnp_eligibility_tool_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
@@ -234,7 +234,7 @@
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Real-time logic</span>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
       <div style="border-left: 4px solid #FF49A4; padding-left: 18px;">
         <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Many eligibility tools stop after telling someone they qualify, leaving users unsure of the actual value of applying or which programs deserve their attention first.</div>
@@ -244,8 +244,8 @@
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A personalized results page, powered by BestFit's eligibility and benefit-estimation algorithm, is generated in real-time. Users see their potential monthly benefit amount based on their actual answers, helping them better understand the financial impact of available programs.</div>
       </div>
     </div>
-    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
-      <img src="./image-156-mrncdbsr-37uk.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_results_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
@@ -264,7 +264,7 @@
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Accessible reading</span>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
       <div style="border-left: 4px solid #E8FF00; padding-left: 18px;">
         <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Even after learning they qualify, people are left to untangle applications across a maze of separate agency sites and documents needed.</div>
@@ -274,8 +274,8 @@
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Support Plans translate eligibility results into a plain-language task list — the exact next steps, in order, all in one place. Case managers and clients can asynchronously update tasks, allowing organizations to support more people without increasing staff workload.</div>
       </div>
     </div>
-    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
-      <img src="./image-204-mrncee7l-uyzh.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_support_plans_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
@@ -294,7 +294,7 @@
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
       <div style="border-left: 4px solid #72E2EF; padding-left: 18px;">
         <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Benefits applications rarely finish in one sitting, and people lose momentum — and trust — when they can't find where they left off.</div>
@@ -304,8 +304,8 @@
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A centralized dashboard where users can revisit their eligibility results, access their Support Plan, track progress, and quickly return to resources whenever they're ready to continue.</div>
       </div>
     </div>
-    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
-      <img src="./student-dashboard-home-mrncg043-99k7.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_client_dash_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
@@ -325,7 +325,7 @@
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
       <div style="border-left: 4px solid #4BF33F; padding-left: 18px;">
         <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Organizations lacked visibility into how clients were using the platform and had limited insight into outcomes, making it difficult to measure impact, identify trends, or support grant reporting.</div>
@@ -335,8 +335,8 @@
         <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">The admin dashboard gives staff access to screening activity, eligibility trends, client engagement, and program insights, helping organizations make data-informed decisions and demonstrate community impact.</div>
       </div>
     </div>
-    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
-      <img src="./customer_demo_overview_text_icon_sidebar-mrncfidp-6ica.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_admin_dash_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
