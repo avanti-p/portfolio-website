@@ -35,8 +35,8 @@
 
   .placeholder-shot { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 13px; text-align: center; padding: 12px; box-sizing: border-box; }
   .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease; overflow: hidden; height: 280px; }
-  .detail-shot-a { transform: translateY(0px) rotate(-1deg); }
-  .detail-shot-b { transform: translateY(22px) rotate(1deg); }
+  .detail-shot-a { transform: translateY(0px); }
+  .detail-shot-b { transform: translateY(22px); }
   .detail-shot:hover { box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
   .detail-shot-a:hover { transform: translateY(0px) scale(1.1); }
   .detail-shot-b:hover { transform: translateY(22px) scale(1.1); }
@@ -217,10 +217,11 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a">
-        <img src="./assets/bnp_eligibility_tool_process.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="./assets/bnp_eligibility_detail_1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
-      <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div></div>
-      <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
+      <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div>
+        <img src="./assets/bnp_eligibility_detail_2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
     </div>
   </div>
 
@@ -230,7 +231,7 @@
       <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Personalized Results</div>
       <div style="display: flex; gap: 8px; flex-wrap: wrap;">
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Est. monthly benefit</span>
-        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Personalized picks</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Information hierarchy</span>
         <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Real-time logic</span>
       </div>
     </div>
@@ -248,9 +249,12 @@
       <img src="./assets/bnp_results_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-      <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
-      <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div></div>
-      <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
+      <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div>
+        <img src="./assets/bnp_results_detail_1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div>
+        <img src="./assets/bnp_results_detail_2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
     </div>
   </div>
 
