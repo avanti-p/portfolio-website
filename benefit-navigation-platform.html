@@ -41,6 +41,30 @@
   .detail-shot-a:hover { transform: translateY(0px) scale(1.1); }
   .detail-shot-b:hover { transform: translateY(22px) scale(1.1); }
   .detail-shot-placeholder { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 11px; text-align: center; padding: 8px; box-sizing: border-box; }
+
+  .detail-carousel { position: relative; }
+  .detail-shot-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 22px 4px 46px;
+    margin: -22px -4px -46px;
+  }
+  .detail-shot-track::-webkit-scrollbar { display: none; }
+  .detail-shot-track .detail-shot { flex: 0 0 300px; scroll-snap-align: start; }
+  .carousel-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    z-index: 6; width: 38px; height: 38px; border-radius: 50%;
+    border: none; background: #030504; color: #fff; font-size: 18px;
+    line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 10px rgba(3,5,4,0.25); transition: background 0.2s, transform 0.2s;
+  }
+  .carousel-arrow:hover { background: #72E2EF; color: #030504; transform: translateY(-50%) scale(1.08); }
+  .carousel-arrow-prev { left: -14px; }
+  .carousel-arrow-next { right: -14px; }
 </style>
 </head>
 <body>
