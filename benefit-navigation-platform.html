@@ -34,13 +34,13 @@
   .back-btn:hover { transform: rotate(1deg); background: #72E2EF; border-color: #72E2EF; color: #030504 !important; }
 
   .placeholder-shot { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 13px; text-align: center; padding: 12px; box-sizing: border-box; }
-  .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1);; transition: transform 0.35s ease, box-shadow 0.35s ease; flex-shrink: 0; overflow: hidden; width: 32%; height: 280px; }
-.detail-shot-a { transform: translateY(0px) rotate(-2deg); }
-.detail-shot-b { transform: translateY(22px) rotate(2deg); }
-.detail-shot:hover { box-shadow: box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
-.detail-shot-a:hover { transform: translateY(0px) scale(1.5); }
-.detail-shot-b:hover { transform: translateY(22px) scale(1.5); }
-.detail-shot-placeholder { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 11px; text-align: center; padding: 8px; box-sizing: border-box; }
+  .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease; overflow: hidden; height: 280px; }
+  .detail-shot-a { transform: translateY(0px) rotate(-2deg); }
+  .detail-shot-b { transform: translateY(22px) rotate(2deg); }
+  .detail-shot:hover { box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
+  .detail-shot-a:hover { transform: translateY(0px) scale(1.5); }
+  .detail-shot-b:hover { transform: translateY(22px) scale(1.5); }
+  .detail-shot-placeholder { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 11px; text-align: center; padding: 8px; box-sizing: border-box; }
 </style>
 </head>
 <body>
@@ -215,7 +215,7 @@
     <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
       <img src="./assets/bnp_eligibility_tool_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
-    <div style="display: flex; flex-wrap: wrap; flex: 0 0 50%; gap: 2%; align-items: flex-start;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a">
         <img src="./assets/bnp_eligibility_tool_process.png" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
@@ -247,7 +247,7 @@
     <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
       <img src="./image-156-mrncdbsr-37uk.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
-    <div style="display: flex; gap: 2%; align-items: flex-start;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
@@ -277,7 +277,7 @@
     <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
       <img src="./image-204-mrncee7l-uyzh.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
-    <div style="display: flex; gap: 2%; align-items: flex-start;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
@@ -307,7 +307,7 @@
     <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
       <img src="./student-dashboard-home-mrncg043-99k7.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
-    <div style="display: flex; gap: 2%; align-items: flex-start;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
@@ -338,7 +338,7 @@
     <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 8px 10px 0 rgba(3,5,4,0.12); margin-bottom: 34px;">
       <img src="./customer_demo_overview_text_icon_sidebar-mrncfidp-6ica.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
-    <div style="display: flex; gap: 2%; align-items: flex-start;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div></div>
       <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div></div>
