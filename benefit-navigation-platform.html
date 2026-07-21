@@ -34,7 +34,7 @@
   .back-btn:hover { transform: rotate(1deg); background: #72E2EF; border-color: #72E2EF; color: #030504 !important; }
 
   .placeholder-shot { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 13px; text-align: center; padding: 12px; box-sizing: border-box; }
-  .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease; overflow: hidden; height: 280px; }
+  .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease;  transform: translate3d(0, 0, 0); backface-visibility: hidden; overflow: hidden; height: 297.66px; }
   .detail-shot:hover { box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
   .detail-shot-a:hover { transform: scale(1.1); }
   .detail-shot-b:hover { transform: scale(1.1); }
@@ -247,10 +247,10 @@
       <img src="./assets/bnp_results_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-      <div class="detail-shot detail-shot-a"><div class="detail-shot-placeholder">Detail shot</div>
+      <div class="detail-shot detail-shot-a">
         <img src="./assets/bnp_results_detail_1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
-      <div class="detail-shot detail-shot-b"><div class="detail-shot-placeholder">Detail shot</div>
+      <div class="detail-shot detail-shot-b">
         <img src="./assets/bnp_results_detail_2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
     </div>
