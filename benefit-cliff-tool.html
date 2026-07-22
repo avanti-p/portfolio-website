@@ -34,6 +34,11 @@
   .back-btn:hover { transform: rotate(1deg); background: #72E2EF; border-color: #72E2EF; color: #030504 !important; }
 
   .placeholder-shot { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 13px; text-align: center; padding: 12px; box-sizing: border-box; }
+  .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease;  transform: translate3d(0, 0, 0); backface-visibility: hidden; overflow: hidden; height: 297.66px; }
+  .detail-shot:hover { box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
+  .detail-shot-a:hover { transform: scale(1.1); }
+  .detail-shot-b:hover { transform: scale(1.1); }
+  .detail-shot-placeholder { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 11px; text-align: center; padding: 8px; box-sizing: border-box; }
 </style>
 </head>
 <body>
@@ -147,7 +152,7 @@
             <div><br></div>
             <div>From discovery through launch, I partnered with leadership, engineers, and on-staff policy experts to define what we should build, why it mattered, and how to make it approachable for the people who needed it most.</div>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
             <div class="role-card" style="background: #fff; padding: 24px; box-shadow: 4px 5px 0 rgba(3,5,4,0.1); transform: rotate(-1deg); border-radius: 15px;">
               <div style="font-size: 14.5px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;"><span style="width: 8px; height: 8px; background: #72E2EF; display: inline-block;"></span>Product Strategy</div>
               <div style="font-size: 13px; line-height: 1.6; color: #6b6764; margin-bottom: 8px; padding-left: 14px; position: relative;"><span style="position: absolute; left: 0;">–</span>Defined MVP scope</div>
@@ -175,147 +180,152 @@
           </div>
         </div>
 
-        <!-- 03 FEATURED COMPONENTS -->
-        <div id="case-components" style="margin-top: 90px;">
-          <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">03</div>
-          <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 8px; transform: rotate(-0.5deg);">FEATURED COMPONENTS</h2>
-          <p style="font-size: 15px; line-height: 1.7; color: #6b6764; max-width: 560px; margin: 0 0 44px;">A visual walkthrough of the pieces I designed. Drop in screens and process shots to let the work speak for itself.</p>
+ <!-- 03 FEATURED COMPONENTS -->
+<div id="case-components" style="margin-top: 90px;">
+  <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">03</div>
+  <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 8px; transform: rotate(-0.5deg);">FEATURED COMPONENTS</h2>
+  <p style="font-size: 15px; line-height: 1.7; color: #6b6764; max-width: 560px; margin: 0 0 60px;">Five pieces of the platform, each framed by the problem it solves.</p>
 
-          <!-- Eligibility Screening Tool -->
-          <div style="margin-bottom: 84px;">
-            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="width: 8px; height: 34px; background: #72E2EF; display: inline-block; border-radius: 4px;"></span>
-                <div>
-                  <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Eligibility Screening Tool</div>
-                  <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">Making complicated questions feel simple.</div>
-                </div>
-              </div>
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Reduced cognitive load</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Plain language</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Multi-state policy</span>
-              </div>
-            </div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">The engine weighs hundreds of policy rules behind the scenes—but users never have to. I guided people one step at a time with plain language, progressive disclosure, and conversational flows.</p>
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 18px;">
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <img src="./assets/bnp_eligibility_tool_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-              </div>
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <img src="./assets/bnp_eligibility_tool_process.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-              </div>
-            </div>
-          </div>
+  <!-- Eligibility Screening Tool -->
+  <div style="margin-bottom: 130px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Eligibility Screening Tool</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Reduced cognitive load</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Plain language</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Multi-state policy</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div style="border-left: 4px solid #72E2EF; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Existing screening tools are long, confusing, and filled with government terminology. Organizations also spend significant staff time manually determining eligibility, leading to inconsistent results and slower client support.</div>
+      </div>
+      <div style="border-left: 4px solid #72E2EF; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE SOLUTION</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A guided eligibility experience that translates >95 pages of government forms, across multiple benefits, into a simple and quick screener. People see one plain-language question at a time, revealed progressively so nothing feels overwhelming, reducing the burden for multiple on both clients and case managers.</div>
+      </div>
+    </div>
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_eligibility_tool_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot detail-shot-a">
+        <img src="./assets/bnp_eligibility_detail_1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot detail-shot-b">
+        <img src="./assets/bnp_eligibility_detail_2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
 
-          <!-- Personalized Results -->
-          <div style="margin-bottom: 84px;">
-            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="width: 8px; height: 34px; background: #FF49A4; display: inline-block; border-radius: 4px;"></span>
-                <div>
-                  <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Personalized Results</div>
-                  <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">People don't need more data—they need clarity.</div>
-                </div>
-              </div>
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Est. monthly benefit</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Personalized picks</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Real-time logic</span>
-              </div>
-            </div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">Instead of drowning people in program details, the results view leads with estimated monthly benefit value and a clear, approachable summary—so impact lands in seconds and the next step feels obvious.</p>
-            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 18px;">
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <div class="placeholder-shot">Drop a process shot</div>
-              </div>
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <img src="./image-156-mrncdbsr-37uk.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-              </div>
-            </div>
-          </div>
+  <!-- Personalized Results -->
+  <div style="margin-bottom: 130px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Personalized Results</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Est. monthly benefit</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Information hierarchy</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Real-time logic</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div style="border-left: 4px solid #FF49A4; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Many eligibility tools stop after telling someone they qualify, leaving users unsure of the actual value of applying or which programs deserve their attention first.</div>
+      </div>
+      <div style="border-left: 4px solid #FF49A4; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE SOLUTION</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A personalized results page, powered by BestFit's eligibility and benefit-estimation algorithm, is generated in real-time. Users see their potential monthly benefit amount based on their actual answers, helping them better understand the financial impact of available programs.</div>
+      </div>
+    </div>
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_results_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot detail-shot-a">
+        <img src="./assets/bnp_results_detail_1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot detail-shot-b">
+        <img src="./assets/bnp_results_detail_2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
 
-          <!-- Support Plans -->
-          <div style="margin-bottom: 84px;">
-            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="width: 8px; height: 34px; background: #E8FF00; display: inline-block; border-radius: 4px;"></span>
-                <div>
-                  <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Support Plans</div>
-                  <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">From "You're eligible" to "Here's exactly what to do."</div>
-                </div>
-              </div>
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Personalized steps</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Always available</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Accessible reading</span>
-              </div>
-            </div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">One of my favorite features. Support Plans turn eligibility results into personalized action steps in clear, easy-to-read language—a practical checklist tailored to each person's situation, not a maze of government sites.</p>
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 18px;">
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <img src="./image-204-mrncee7l-uyzh.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-              </div>
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <div class="placeholder-shot">Drop a process shot</div>
-              </div>
-            </div>
-          </div>
+  <!-- Support Plans -->
+  <div style="margin-bottom: 130px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Support Plans</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Personalized steps</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Always available</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Accessible reading</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div style="border-left: 4px solid #E8FF00; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Even after learning they qualify, people are left to untangle applications across a maze of separate agency sites and documents needed.</div>
+      </div>
+      <div style="border-left: 4px solid #E8FF00; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE SOLUTION</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Support Plans translate eligibility results into a plain-language task list — the exact next steps, in order, all in one place. Case managers and clients can asynchronously update tasks, allowing organizations to support more people without increasing staff workload.</div>
+      </div>
+    </div>
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_support_plans_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
 
-          <!-- Admin Dashboard -->
-          <div style="margin-bottom: 84px;">
-            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="width: 8px; height: 34px; background: #4BF33F; display: inline-block; border-radius: 4px;"></span>
-                <div>
-                  <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Admin Dashboard</div>
-                  <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">Less time searching—more time supporting.</div>
-                </div>
-              </div>
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Org-wide reporting</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Role-based views</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
-              </div>
-            </div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">Case managers need answers, not another dashboard. This view puts client progress, eligibility outcomes, and platform activity in one place—supporting faster decisions and more informed conversations.</p>
-            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 18px;">
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <div class="placeholder-shot">Drop a process shot</div>
-              </div>
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <img src="./customer_demo_overview_text_icon_sidebar-mrncfidp-6ica.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-              </div>
-            </div>
-          </div>
-
-          <!-- Client Dashboard -->
-          <div style="margin-bottom: 76px;">
-            <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="width: 8px; height: 34px; background: #72E2EF; display: inline-block; border-radius: 4px;"></span>
-                <div>
-                  <div style="font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;">Client Dashboard</div>
-                  <div style="font-size: 14px; font-weight: 600; color: #454141; margin-top: 2px;">One place to pick up right where you left off.</div>
-                </div>
-              </div>
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Personalized home</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Saved plans</span>
-                <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
-              </div>
-            </div>
-            <p style="font-size: 14.5px; line-height: 1.7; color: #454141; max-width: 720px; margin: 0 0 18px;">Applying for benefits rarely happens in one sitting. A personalized dashboard keeps results, Support Plans, and recommended resources together—so people can return with confidence and stay organized from start to finish.</p>
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 18px;">
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <img src="./student-dashboard-home-mrncg043-99k7.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-              </div>
-              <div style="height: 420px; overflow: hidden; border-radius: 18px; box-shadow: 5px 6px 0 rgba(3,5,4,0.12);">
-                <div class="placeholder-shot">Drop a process shot</div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Client Dashboard -->
+  <div style="margin-bottom: 76px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Client Dashboard</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Personalized home</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Saved plans</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div style="border-left: 4px solid #72E2EF; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Benefits applications rarely finish in one sitting, and people lose momentum — and trust — when they can't find where they left off.</div>
+      </div>
+      <div style="border-left: 4px solid #72E2EF; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE SOLUTION</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A centralized dashboard where users can revisit their eligibility results, access their Support Plan, track progress, and quickly return to resources whenever they're ready to continue.</div>
+      </div>
+    </div>
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_client_dash_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+  <!-- Admin Dashboard -->
+  <div style="margin-bottom: 130px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Admin Dashboard</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Org-wide reporting</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Role-based views</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Progress tracking</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div style="border-left: 4px solid #4BF33F; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE PROBLEM</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Organizations lacked visibility into how clients were using the platform and had limited insight into outcomes, making it difficult to measure impact, identify trends, or support grant reporting.</div>
+      </div>
+      <div style="border-left: 4px solid #4BF33F; padding-left: 18px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 8px;">THE SOLUTION</div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">The admin dashboard gives staff access to screening activity, eligibility trends, client engagement, and program insights, helping organizations make data-informed decisions and demonstrate community impact.</div>
+      </div>
+    </div>
+    <div style="height: 460px; overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/bnp_admin_dash_product.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+</div>
 
         <!-- 04 THE OUTCOMES -->
         <div id="case-outcomes" style="margin-top: 20px;">
