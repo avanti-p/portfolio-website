@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Establishing Brand Identity — Case Study — Avanti Pointer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<style>
+  @keyframes float-y { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-14px) rotate(var(--r,0deg)); } }
+  @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; }
+  a { color: #72E2EF; }
+  a:hover { color: #FF49A4; }
+  ::selection { background: #E8FF00; color: #030504; }
+
+  #case-challenge, #brand-foundations, #a, #case-outcomes { scroll-margin-top: 110px; }
+
+  .logo-link { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .logo-img-wrap { position: relative; height: 40px; transform: rotate(-6deg); transition: transform 0.25s; }
+  .logo-link:hover .logo-img-wrap { transform: rotate(6deg) scale(1.08); }
+
+  .say-hi { transition: transform 0.2s; }
+  .say-hi:hover { transform: rotate(2deg) scale(1.05); }
+
+  .page-nav-item { transition: transform 0.15s; text-decoration: none; }
+  .page-nav-item:hover { transform: translateX(3px); }
+
+  .role-card { transition: transform 0.2s; }
+  .role-card:hover { transform: rotate(0deg) translateY(-4px); }
+
+  .back-btn { transition: transform 0.2s; text-decoration: none; }
+  .back-btn:hover { transform: rotate(1deg); background: #72E2EF; border-color: #72E2EF; color: #030504 !important; }
+
+  .placeholder-shot { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 13px; text-align: center; padding: 12px; box-sizing: border-box; }
+  .detail-shot { border-radius: 14px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease;  transform: translate3d(0, 0, 0); backface-visibility: hidden; overflow: hidden; height: 297.66px; }
+  .detail-shot:hover { box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); z-index: 5; }
+  .detail-shot-placeholder { width: 100%; height: 100%; background: #F0EFEC; display: flex; align-items: center; justify-content: center; color: #9a9591; font-size: 11px; text-align: center; padding: 8px; box-sizing: border-box; }
+</style>
+</head>
+<body>
+
+<div style="font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FAFAF8; color: #030504; min-height: 100vh;">
+
+  <!-- ============ NAV ============ -->
+  <div style="position: sticky; top: 0; z-index: 100; background: #030504; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; box-sizing: border-box;">
+    <a href="index.html" class="logo-link">
+      <div class="logo-img-wrap">
+        <img src="./avanti-logo.png" alt="Avanti" style="height: 40px; width: auto; display: block;">
+      </div>
+      <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 1px; color: #fff;">AVANTI POINTER</span>
+    </a>
+    <div style="display: flex; gap: 36px; align-items: center;">
+      <a href="index.html" style="text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: #fff; transition: color 0.2s">HOME</a>
+      <a href="portfolio.html" style="text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: #72E2EF; transition: color 0.2s">PORTFOLIO</a>
+      <a href="resume.html" style="text-decoration: none; font-size: 15px; font-weight: 700; letter-spacing: 1px; cursor: pointer; color: #fff; transition: color 0.2s">RESUME</a>
+      <a href="contact.html" class="say-hi" style="text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; cursor: pointer; color: #E8FF00; padding: 10px 18px; border: 1.5px solid #E8FF00; transform: rotate(-2deg); border-radius: 15px;">SAY HI →</a>
+    </div>
+  </div>
+
+  <!-- ============ CASE STUDY PAGE ============ -->
+  <div>
+    <div style="position: relative; background: #030504; padding: 60px 24px 50px; box-sizing: border-box; overflow: hidden;">
+      <span style="position: absolute; top: 26px; right: 60px; font-size: 22px; color: #4BF33F; animation: float-y 4s ease-in-out infinite; --r: -8deg;">+</span>
+      <div style="max-width: 1340px; margin: 0 auto;">
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 1.5px; color: #72E2EF; margin-bottom: 18px;"><a href="portfolio.html" style="color: inherit; text-decoration: none; cursor: pointer;">PORTFOLIO</a> / BRAND IDENTITY</div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #FF49A4; margin-bottom: 12px;">PRODUCT DESIGN</div>
+            <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 44px; color: #fff; line-height: 1.05; margin: 0 0 16px; transform: rotate(-1deg);">ESTABLISHING<br>BRAND<br>IDENTITY</h1>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 15px;">BRANDING</span>
+              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 15px;">STORYTELLING</span>
+              <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 15px;">MARKETING</span>
+            </div>
+          </div>
+          <p style="max-width: 550px; font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,0.75); margin: 0;">From logo to launch materials, building a recognizable brand that supported BestFit's growth.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: 1340px; margin: 0 auto; padding: 40px 15px 0; box-sizing: border-box;">
+      <div style="height: 400px; overflow: hidden; transform: rotate(-0.6deg); border-radius: 15px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1);">
+        <img src="./assets/branding_hero_image.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="BestFit Navigation Platform">
+      </div>
+    </div>
+
+    <div style="background: #72E2EF; margin-top: 46px; transform: rotate(-0.4deg);">
+      <div style="max-width: 1340px; margin: 0 auto; padding: 20px 24px; display: flex; gap: 60px; flex-wrap: wrap; box-sizing: border-box; transform: rotate(0.4deg);">
+        <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">ROLE</div><div style="font-size: 14.5px; font-weight: 700;">Visual Designer</div></div>
+        <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">TIME</div><div style="font-size: 14.5px; font-weight: 700;">2020-2026</div></div>
+        <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">FOCUS</div><div style="font-size: 14.5px; font-weight: 700;">Branding &amp; Marketing</div></div>
+        <div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #030504; opacity: 0.7;">PLATFORM</div><div style="font-size: 14.5px; font-weight: 700;">Print, Web, Email, Video</div></div>
+      </div>
+    </div>
+
+    <div style="max-width: 1340px; margin: 0 auto; padding: 90px 24px; box-sizing: border-box; display: flex; gap: 60px; align-items: flex-start;">
+      <div style="width: 190px; flex-shrink: 0; position: sticky; top: 96px;">
+        <div style="font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 18px;">ON THIS PAGE</div>
+        <a href="#case-challenge" class="page-nav-item" style="display: flex; gap: 10px; align-items: baseline; padding: 9px 0; cursor: pointer; border-left: 3px solid #FF49A4; padding-left: 14px; margin-bottom: 4px;">
+          <span style="font-size: 11px; font-weight: 700; color: #FF49A4;">01</span>
+          <span style="font-size: 13px; font-weight: 600; color: #454141; line-height: 1.3;">The Challenge</span>
+        </a>
+        <a href="#brand-foundations" class="page-nav-item" style="display: flex; gap: 10px; align-items: baseline; padding: 9px 0; cursor: pointer; border-left: 3px solid #ccdd1e;; padding-left: 14px; margin-bottom: 4px;">
+          <span style="font-size: 11px; font-weight: 700; color: #ccdd1e;">02</span>
+          <span style="font-size: 13px; font-weight: 600; color: #454141; line-height: 1.3;">Brand Foundations</span>
+        </a>
+        <a href="#applying-brand" class="page-nav-item" style="display: flex; gap: 10px; align-items: baseline; padding: 9px 0; cursor: pointer; border-left: 3px solid #72E2EF; padding-left: 14px; margin-bottom: 4px;">
+          <span style="font-size: 11px; font-weight: 700; color: #72E2EF">03</span>
+          <span style="font-size: 13px; font-weight: 600; color: #454141; line-height: 1.3;">Applying The Brand</span>
+        </a>
+        <a href="#case-outcomes" class="page-nav-item" style="display: flex; gap: 10px; align-items: baseline; padding: 9px 0; cursor: pointer; border-left: 3px solid #4BF33F; padding-left: 14px; margin-bottom: 4px;">
+          <span style="font-size: 11px; font-weight: 700; color: #4BF33F;">04</span>
+          <span style="font-size: 13px; font-weight: 600; color: #454141; line-height: 1.3;">The Outcomes</span>
+        </a>
+      </div>
+
+      <div style="flex: 1; min-width: 0;">
+
+        <!-- 01 THE CHALLENGE -->
+        <div id="case-challenge" style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">01</div>
+        <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 26px; transform: rotate(-0.5deg);">THE CHALLENGE</h2>
+        <div style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 16px;">
+          <div>When I started working at BestFit, it was evolving from an app focused on matching students to the right college  into a SaaS platform helping connect college students to basic needs resources so they can stay in schoo. As the company grew, the brand needed to communicate this change in direction, trust, accessibility, and innovation consistently across every customer touchpoint.</div>
+        </div>
+
+<!-- 02 BRAND FOUNDATIONS -->
+<div id="brand-foundations" style="margin-top: 60px;">
+  <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">02</div>
+  <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 8px; transform: rotate(-0.5deg);">BRAND FOUNDATIONS</h2>
+  <p style="font-size: 15px; line-height: 1.7; color: #6b6764; width:100%; margin: 0 0 30px;">Every strong brand starts with a solid foundation. I refined BestFit's visual identity by establishing a scalable system of logos, colors, typography, illustrations, iconography, and brand guidelines that created consistency across every customer touchpoint while supporting the company's continued growth.</p>
+	 <!-- Logo -->
+  <div style="margin-bottom: 60px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Logo</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">My first task was updating the logo. Instead of designing a new one from scratch, I gave the existing one a more polished and modern identity while preserving the brand's recognition. Subtle refinements to the typography, proportions, and color palette improved readability, scalability, and consistency across digital and print applications.</div>
+      </div>
+    </div>
+    <div style="overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_foundation_logo.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+	<!-- Typography -->
+  <div style="margin-bottom: 60px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Typography</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">I used Poppins, a clean and modern sans-serif typeface, to help improve readability across digital and print experiences. This type system provided the flexibility to create clear hierarchy, adapt to a variety of brand applications, and maintain a consistent visual voice across product, marketing, and customer communications.</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundations_type1.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="header text typeface">
+      </div>
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundations_type3.jpg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="body text typeface">
+      </div>
+    </div>
+  </div>
+		<!-- Color -->
+  <div style="margin-bottom: 60px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Color</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">I developed a scalable color system built around a set of core brand colors with complementary secondary palettes and tonal variations. This flexible approach created visual consistency across digital and print applications while giving the brand enough range to support different products, campaigns, and communications without losing its identity.</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_color1.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_color2.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+			<!-- Icons -->
+  <div style="margin-bottom: 60px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Icons</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">I developed a scalable color system built around a set of core brand colors with complementary secondary palettes and tonal variations. This flexible approach created visual consistency across digital and print applications while giving the brand enough range to support different products, campaigns, and communications without losing its identity.</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_icons1.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_icons2.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+		<!-- Illustrations -->
+  <div style="margin-bottom: 60px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Illustrations</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">I created a custom illustration system of vector graphics and diverse characters in Adobe Illustrator to give BestFit a distinctive and inclusive visual identity. The illustrations brought consistency, warmth, and approachability to the brand, helping simplify complex topics across digital products, onboarding materials, presentations, and marketing assets.</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_illustration1.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_illustration2.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+	  <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_atomic_design1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+	  <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_atomic_design2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+	  <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_characters1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+	  <div class="detail-shot" style="height:100%">
+        <img src="./assets/branding_foundation_characters2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+
+    </div>
+  </div>
+</div>
+		  
+ <!-- 03 APPLYING THE BRAND -->
+<div id="applying-brand" style="margin-top: 90px;">
+  <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">03</div>
+  <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 8px; ">APPLYING THE BRAND</h2>
+  <p style="font-size: 15px; line-height: 1.7; color: #6b6764; width:100%; margin: 0 0 30px;">Designing the identity was only the beginning. Over my time at BestFit, I extended the BestFit brand across every customer touchpoint—from the website and product experience to sales presentations, onboarding materials, conference booths, and marketing campaigns—creating a consistent experience wherever people interacted with the company.</p>
+
+  <!-- Digital Presence -->
+  <div style="margin-bottom: 80px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Digital Presence</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Website</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Email</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Content marketing</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">
+I helped reshape BestFit's digital presence to reflect the company's growing platform and expanding customer base. Alongside a redesigned website featuring dedicated product and industry use case pages, I created branded email campaigns, landing pages, and digital marketing assets that reinforced a cohesive visual identity and clearly communicated the company's mission and solutions.
+          </div>
+      </div>
+    </div>
+    <div style="overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_digital_webredesign.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+	  <div style=" overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_digital_email.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+  <!-- Product Design -->
+  <div style="margin-bottom: 80px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Product Experience</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Dashboard</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Illustrations</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(255,73,164,0.22); padding: 6px 12px; border-radius: 20px;">Onboarding</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">A consistent brand experience doesn't end with marketing—it continues into onboarding and everyday product use. I created onboarding materials, training presentations, and in-product visual assets that reinforced BestFit's identity at every stage of the customer journey.</div>
+      </div>
+    </div>
+    <div style="overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_product_admin.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+	<div style="overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_product_email.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+
+  <!-- Sales Communication -->
+  <div style="margin-bottom: 80px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Sales &amp; Investor Communications</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Pitch decks</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Sales Collateral</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(232,255,0,0.4); padding: 6px 12px; border-radius: 20px;">Grant proposals</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div >
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">I partnered with leadership and business development to create pitch decks, customer presentations, grant proposals, and conference materials that clearly communicated BestFit's value. By combining visual storytelling with consistent branding, these materials helped support sales conversations, fundraising efforts, and strategic partnerships.
+			<br>
+			</div>
+      </div>
+      
+    </div>
+    <div style=" overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_sales_onepager.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+
+  <!-- Events and Conferences -->
+  <div style="margin-bottom: 80px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Events &amp; Conferences</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Conference Displays</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Banners</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(75,243,63,0.28); padding: 6px 12px; border-radius: 20px;">Print Collateral</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">From demo days to industry conferences, I planned and designed the branded materials needed to support successful events. Whether creating presentation decks, booth graphics, banners, or printed handouts, I ensured every touchpoint delivered a consistent brand experience and effectively showcased BestFit's products and mission.</div>
+      </div>
+    </div>
+    <div style="overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_events_table.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+	<div style="overflow: hidden; border-radius: 20px; box-shadow: 0 0 8px 3px rgba(3, 5, 4, 0.1); margin-bottom: 34px;">
+      <img src="./assets/branding_events_decks.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+	
+	 <!-- Motion Graphics -->
+  <div style="margin-bottom: 80px;">
+    <div style="margin-bottom: 24px;">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; margin-bottom: 14px;">Motion Graphics &amp; Video</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Animation</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Promotional videos</span>
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #030504; background: rgba(114,226,239,0.35); padding: 6px 12px; border-radius: 20px;">Presentations</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 14.5px; line-height: 1.65; color: #454141;">Motion became another extension of the BestFit brand. I produced animated marketing videos in After Effects and developed storyboards for grant submissions, product promotions, and a featured video presented at the 2025 Truist Inspire Awards. Every project was designed to communicate complex ideas through clear, engaging visual storytelling.</div>
+      </div>
+    </div>
+	  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="detail-shot">
+        <img src="./assets/branding_motion_cloud_icons.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="detail-shot">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ijaV4mPQfJs?si=iW5l_bdLez7wdJCD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- 04 THE OUTCOMES -->
+        <div id="case-outcomes" style="margin-top: 20px;">
+          <div style="font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; color: #9a9591; margin-bottom: 10px;">04</div>
+          <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; margin: 0 0 26px; transform: rotate(0.5deg);">THE OUTCOMES</h2>
+          <div style="font-size: 15.5px; line-height: 1.75; color: #454141; max-width: 760px; margin: 0 0 34px;">
+           
+          </div>
+      
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div style="background: #fff; padding: 22px; border-top: 4px solid #72E2EF; box-shadow: 3px 4px 0 rgba(3,5,4,0.08); border-radius: 15px;">
+              <div style="font-size: 14.5px; font-weight: 700; margin-bottom: 10px;">More Consistent Experiences</div>
+              <div style="font-size: 13px; line-height: 1.6; color: #6b6764;">Unified branding across web, product, marketing, events, and presentations created a cohesive experience wherever customers interacted with BestFit.</div>
+            </div>
+            <div style="background: #fff; padding: 22px; border-top: 4px solid #FF49A4; box-shadow: 3px 4px 0 rgba(3,5,4,0.08); border-radius: 15px;">
+              <div style="font-size: 14.5px; font-weight: 700; margin-bottom: 10px;">Stronger Storytelling</div>
+              <div style="font-size: 13px; line-height: 1.6; color: #6b6764;">Clear visual communication helped leadership, sales, and customer success teams explain complex products and mission-driven work with confidence.</div>
+            </div>
+            <div style="background: #fff; padding: 22px; border-top: 4px solid #E8FF00; box-shadow: 3px 4px 0 rgba(3,5,4,0.08); border-radius: 15px;">
+              <div style="font-size: 14.5px; font-weight: 700; margin-bottom: 10px;">Design at Scale</div>
+              <div style="font-size: 13px; line-height: 1.6; color: #6b6764;">Reusable templates, illustrations, and brand guidelines made it easier to produce high-quality assets while maintaining consistency across teams.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="background: #030504; text-align: center; padding: 70px 24px; box-sizing: border-box;">
+      <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 2px; color: #72E2EF; margin-bottom: 22px;">EXPLORE MORE</div>
+      <a href="portfolio.html" class="back-btn" style="display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; padding: 14px 28px; border: 1.5px solid #fff; color: #fff; cursor: pointer; transform: rotate(-1deg); border-radius: 15px;">← BACK TO PORTFOLIO</a>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div style="position: relative; background: #030504; padding: 56px 48px 34px; box-sizing: border-box; overflow: hidden;">
+    <span style="position: absolute; bottom: 30px; left: 48px; font-size: 20px; color: #72E2EF; animation: spin-slow 10s linear infinite;">+</span>
+    <span style="position: absolute; bottom: 30px; left: 72px; font-size: 20px; color: #FF49A4; animation: spin-slow 8s linear infinite reverse;">+</span>
+    <span style="position: absolute; bottom: 30px; left: 96px; font-size: 20px; color: #E8FF00; animation: spin-slow 12s linear infinite;">+</span>
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
+      <div>
+        <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: #72E2EF; transform: rotate(-1deg); margin-bottom: 8px;">AVANTI DESIGNS</div>
+        <div style="font-size: 13.5px; color: rgba(255,255,255,0.6);">Impactful. Dependable. Expressive. Smiley. :)</div>
+      </div>
+      <div style="display: flex; gap: 30px;">
+        <a href="index.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">HOME</a>
+        <a href="portfolio.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">PORTFOLIO</a>
+        <a href="resume.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">RESUME</a>
+        <a href="contact.html" style="text-decoration: none; font-size: 12.5px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.75); cursor: pointer;">CONTACT</a>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12.5px; color: rgba(255,255,255,0.5);">(470) 338-3949 · avanti.pointer@gmail.com · avantipdesigns.com</div>
+  </div>
+
+</div>
+
+</body>
+</html>
